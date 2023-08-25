@@ -33,7 +33,12 @@ class Member extends Authenticatable
     protected $appends = ["member_identity"];
     public function memberIdentity(): Attribute
     {
-        return Attribute::make(get: fn () => $this->interest->code . "-" . $this->id);
+        return Attribute::make(
+            get: function () {
+                $interestCount = $this->interest()->where('id', $this->id)->count() + 1;
+                return $this->interest->code . "-" . $interestCount;
+            }
+        );
     }
 
     public function church()
