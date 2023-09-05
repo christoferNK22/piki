@@ -1,0 +1,7 @@
+:root {
+    --accent-color: #1b0c61; /* Warna merah sebagai variabel */
+}
+
+.accent-text {
+    color: var(--accent-color);
+}
