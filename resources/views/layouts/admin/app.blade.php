@@ -5,15 +5,15 @@
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
     <title>@yield('title', 'Dashboard') - PIKI</title>
-    @include('layoutsAdmin.partials.css')
+    @include('layouts.admin.partials.css')
 </head>
 
 <body>
     <div id="app">
         <div class="main-wrapper main-wrapper-1">
             <div class="navbar-bg"></div>
-            @include('layoutsAdmin.partials.navbar')
-            @include('layoutsAdmin.partials.sidebar')
+            @include('layouts.admin.partials.navbar')
+            @include('layouts.admin.partials.sidebar')
 
             <!-- Main Content -->
             <div class="main-content">
@@ -28,11 +28,11 @@
                     </div>
                 </section>
             </div>
-            @include('layoutsAdmin.partials.footer')
+            @include('layouts.admin.partials.footer')
         </div>
     </div>
 
-    @include('layoutsAdmin.partials.scripts')
+    @include('layouts.admin.partials.scripts')
 </body>
 
 </html>

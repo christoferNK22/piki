@@ -23,11 +23,17 @@
 
 
   <script>
-      @if (session()->has('status'))
-          alert("test")
+      @if (session()->has('error'))
           iziToast.error({
-              title: 'Hello, world!',
-              message: 'This awesome plugin is made by iziToast',
+              title: 'Gagal',
+              message: '{{ session()->get('error') }}',
+              position: 'topRight'
+          });
+      @endif
+      @if (session()->has('status'))
+          iziToast.success({
+              title: 'Berhasil',
+              message: '{{ session()->get('status') }}',
               position: 'topRight'
           });
       @endif

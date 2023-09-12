@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire\Church;
+namespace App\Livewire\Admin\Church;
 
 use App\Models\Church;
 use Livewire\Component;
@@ -21,6 +21,6 @@ class ChurchIndex extends Component
     }
     public function render()
     {
-        return view('livewire.church.church-index')->title('Master Gereja');
+        return view('livewire.admin.church.church-index')->title('Master Gereja');
     }
 }

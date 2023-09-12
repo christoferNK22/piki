@@ -13,14 +13,11 @@
                         </div>
 
                         <div class="card-body">
-                            <form method="POST" action="#" class="needs-validation" novalidate="">
+                            <form method="POST" action="#" wire:submit="auth">
                                 <div class="form-group">
-                                    <label for="email">Email</label>
-                                    <input id="email" type="email" class="form-control" name="email"
-                                        tabindex="1" required autofocus>
-                                    <div class="invalid-feedback">
-                                        Please fill in your email
-                                    </div>
+                                    <label for="email">Username</label>
+                                    <input id="email" type="text" class="form-control" name="email"
+                                        tabindex="1" required autofocus wire:model="username">
                                 </div>
 
                                 <div class="form-group">
@@ -33,10 +30,7 @@
                                         </div>
                                     </div>
                                     <input id="password" type="password" class="form-control" name="password"
-                                        tabindex="2" required>
-                                    <div class="invalid-feedback">
-                                        please fill in your password
-                                    </div>
+                                        tabindex="2" required wire:model="password">
                                 </div>
 
                                 <div class="form-group">
@@ -55,9 +49,6 @@
                             </form>
 
                         </div>
-                    </div>
-                    <div class="mt-5 text-muted text-center">
-                        Don't have an account? <a href="{{ route('register') }}">Create One</a>
                     </div>
                     <div class="simple-footer">
                         Copyright &copy; PIKI 2023
