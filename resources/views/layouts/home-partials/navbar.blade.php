@@ -44,11 +44,11 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link click-scroll" href="#section_6">Kontak</a>
+                    <a class="nav-link click-scroll" href="#section_5">Kontak</a>
                 </li>
 
                 <li class="nav-item ms-3">
-                    <a class="nav-link custom-btn custom-border-btn btn" href="member.html">Member</a>
+                    <a class="nav-link custom-btn custom-border-btn btn" href="{{ route('home.member') }}">Member</a>
                 </li>
             </ul>
         </div>

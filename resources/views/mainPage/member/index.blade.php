@@ -1,4 +1,4 @@
-@extends('layoutsAdmin.app')
+@extends('layouts.partials-admin.app')
 @section('title', 'Member')
 @section('content')
     <div class="row">
