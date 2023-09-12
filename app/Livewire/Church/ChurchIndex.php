@@ -21,6 +21,6 @@ class ChurchIndex extends Component
     }
     public function render()
     {
-        return view('livewire.church.church-index')->title('Gereja');
+        return view('livewire.church.church-index')->title('Master Gereja');
     }
 }

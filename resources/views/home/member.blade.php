@@ -25,7 +25,7 @@
 
                                 <div class="col-lg-6 col-12 mx-auto">
                                     <form class="custom-form donate-form" action="#" method="get" role="form">
-                                        <h3 class="mb-4">Make a donation</h3>
+                                        <h3 class="mb-4">Buat Keanggotaan</h3>
 
                                         <div class="row">
                                             <div class="col-lg-12 col-12">

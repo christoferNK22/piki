@@ -1,5 +1,6 @@
 <?php
 
+use App\Livewire\Auth\Login;
 use App\Livewire\Church\ChurchIndex;
 use App\Livewire\Church\ChurchCreate;
 use App\Livewire\Church\ChurchEdit;
@@ -18,31 +19,24 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/home', function () {
-    return view('home.beranda1');
-})->name('beranda1');
-
-Route::prefix('home')->name('home.')->group(function () {
-    Route::get('beranda1', fn () => view('home.beranda1'))->name('beranda1');
-});
-
-Route::get('/home', function () {
     return view('home.beranda');
 })->name('beranda');
 
 Route::prefix('home')->name('home.')->group(function () {
     Route::get('beranda', fn () => view('home.beranda'))->name('beranda');
+    Route::get('member', fn () => view('home.member'))->name('member');
 });
 
 Route::get('/admin', function () {
     return view('welcomeAdmin');
 })->name('dashboard');
 
-Route::prefix('auth')->name('auth.')->group(function () {
-    Route::get('login', fn () => view('auth.login'))->name('login');
+Route::prefix('auth')->group(function () {
+    Route::get('login', Login::class)->name('login')->middleware('guest');
     Route::get('register', fn () => view('auth.register'))->name('register');
 });
 
-Route::prefix('admin/')->group(function () {
+Route::prefix('admin/')->middleware('auth')->group(function () {
     Route::name('master.')->group(function () {
         Route::prefix('church')->name('church.')->group(function () {
             Route::get('', ChurchIndex::class)->name('index');
