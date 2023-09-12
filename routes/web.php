@@ -19,14 +19,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/home', function () {
-    return view('home.beranda');
-})->name('beranda');
-
-Route::prefix('home')->name('home.')->group(function () {
-    Route::get('beranda', fn () => view('home.beranda'))->name('beranda');
-    Route::get('member', fn () => view('home.member'))->name('member');
-});
+Route::get('/', function () {
+    return view('livewire.landing.beranda');
+})->name('home');
 
 Route::prefix('admin/')->group(function () {
     Route::get('login', Login::class)->name('login');
@@ -53,13 +48,3 @@ Route::prefix('admin/')->group(function () {
         });
     });
 });
-
-Route::name('mainPage.')->group(function () {
-    Route::prefix('member')->name('member.')->group(function () {
-        Route::get('', fn () => view('mainPage.member.index'))->name('index');
-        Route::get('create', fn () => view('mainPage.member.create'))->name('create');
-        Route::get('detail', fn () => view('mainPage.member.detail'))->name('detail');
-    });
-});
-
-Route::get("/test", fn () => dd(Member::get()->toArray()));

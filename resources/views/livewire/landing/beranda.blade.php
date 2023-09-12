@@ -5,15 +5,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>@yield('title', 'Beranda')PIKI</title>
-    @include('layoutsHome.css')
+    @include('layouts.landing.partials.css')
 </head>
 
 <body>
     <div id="home">
         <div class="main-wrapper main-wrapper-1">
             <div class="navbar-bg"></div>
-            @include('layoutsHome.header')
-            @include('layoutsHome.navbar')
+            @include('layouts.landing.partials.header')
+            @include('layouts.landing.partials.navbar')
 
             <div class="main-content">
                 <!-- Main Content -->
@@ -60,14 +60,14 @@
                                             </div>
                                         </div>
 
-                                        <button class="carousel-control-prev" type="button" data-bs-target="#hero-slide"
-                                            data-bs-slide="prev">
+                                        <button class="carousel-control-prev" type="button"
+                                            data-bs-target="#hero-slide" data-bs-slide="prev">
                                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                             <span class="visually-hidden">Previous</span>
                                         </button>
 
-                                        <button class="carousel-control-next" type="button" data-bs-target="#hero-slide"
-                                            data-bs-slide="next">
+                                        <button class="carousel-control-next" type="button"
+                                            data-bs-target="#hero-slide" data-bs-slide="next">
                                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                             <span class="visually-hidden">Next</span>
                                         </button>
@@ -90,7 +90,8 @@
                                 <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
                                     <div class="featured-block d-flex justify-content-center align-items-center">
                                         <a href="donate.html" class="d-block">
-                                            <img src="{{ asset('public/img/icons/hands.png') }}" class="featured-block-image img-fluid" alt="">
+                                            <img src="{{ asset('public/img/icons/hands.png') }}"
+                                                class="featured-block-image img-fluid" alt="">
 
                                             <p class="featured-block-text">Become a <strong>volunteer</strong></p>
                                         </a>
@@ -100,7 +101,8 @@
                                 <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0 mb-md-4">
                                     <div class="featured-block d-flex justify-content-center align-items-center">
                                         <a href="donate.html" class="d-block">
-                                            <img src="{{ asset('public/img/icons/heart.png') }}" class="featured-block-image img-fluid" alt="">
+                                            <img src="{{ asset('public/img/icons/heart.png') }}"
+                                                class="featured-block-image img-fluid" alt="">
 
                                             <p class="featured-block-text"><strong>Caring</strong> Earth</p>
                                         </a>
@@ -110,7 +112,8 @@
                                 <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0 mb-md-4">
                                     <div class="featured-block d-flex justify-content-center align-items-center">
                                         <a href="donate.html" class="d-block">
-                                            <img src="{{ asset('public/img/icons/receive.png') }}" class="featured-block-image img-fluid" alt="">
+                                            <img src="{{ asset('public/img/icons/receive.png') }}"
+                                                class="featured-block-image img-fluid" alt="">
 
                                             <p class="featured-block-text">Make a <strong>Donation</strong></p>
                                         </a>
@@ -120,7 +123,8 @@
                                 <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
                                     <div class="featured-block d-flex justify-content-center align-items-center">
                                         <a href="donate.html" class="d-block">
-                                            <img src="{{ asset('public/img/icons/scholarship.png') }}" class="featured-block-image img-fluid" alt="">
+                                            <img src="{{ asset('public/img/icons/scholarship.png') }}"
+                                                class="featured-block-image img-fluid" alt="">
 
                                             <p class="featured-block-text"><strong>Scholarship</strong> Program</p>
                                         </a>
@@ -146,8 +150,10 @@
 
                                         <h5 class="mb-3">Kind Heart Charity, Non-Profit Organization</h5>
 
-                                        <p class="mb-0">This is a Bootstrap 5.2.2 CSS template for charity organization websites.
-                                            You can feel free to use it. Please tell your friends about TemplateMo website. Thank
+                                        <p class="mb-0">This is a Bootstrap 5.2.2 CSS template for charity
+                                            organization websites.
+                                            You can feel free to use it. Please tell your friends about TemplateMo
+                                            website. Thank
                                             you.</p>
                                     </div>
 
@@ -218,10 +224,12 @@
 
                                         <p class="text-muted mb-lg-4 mb-md-4">Founding Partner</p>
 
-                                        <p>Lorem Ipsum dolor sit amet, consectetur adipsicing kengan omeg kohm tokito Professional
+                                        <p>Lorem Ipsum dolor sit amet, consectetur adipsicing kengan omeg kohm tokito
+                                            Professional
                                             charity theme based</p>
 
-                                        <p>Sed leo nisl, posuere at molestie ac, suscipit auctor mauris. Etiam quis metus</p>
+                                        <p>Sed leo nisl, posuere at molestie ac, suscipit auctor mauris. Etiam quis
+                                            metus</p>
 
                                         <ul class="social-icon mt-4">
                                             <li class="social-icon-item">
@@ -279,11 +287,13 @@
                                             <div class="custom-block-body">
                                                 <h5 class="mb-3">Children Education</h5>
 
-                                                <p>Lorem Ipsum dolor sit amet, consectetur adipsicing kengan omeg kohm tokito</p>
+                                                <p>Lorem Ipsum dolor sit amet, consectetur adipsicing kengan omeg kohm
+                                                    tokito</p>
 
                                                 <div class="progress mt-4">
-                                                    <div class="progress-bar w-75" role="progressbar" aria-valuenow="75"
-                                                        aria-valuemin="0" aria-valuemax="100"></div>
+                                                    <div class="progress-bar w-75" role="progressbar"
+                                                        aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                                                    </div>
                                                 </div>
 
                                                 <div class="d-flex align-items-center my-2">
@@ -313,12 +323,14 @@
                                             <div class="custom-block-body">
                                                 <h5 class="mb-3">Poverty Development</h5>
 
-                                                <p>Sed leo nisl, posuere at molestie ac, suscipit auctor mauris. Etiam quis metus
+                                                <p>Sed leo nisl, posuere at molestie ac, suscipit auctor mauris. Etiam
+                                                    quis metus
                                                     tempor</p>
 
                                                 <div class="progress mt-4">
-                                                    <div class="progress-bar w-50" role="progressbar" aria-valuenow="50"
-                                                        aria-valuemin="0" aria-valuemax="100"></div>
+                                                    <div class="progress-bar w-50" role="progressbar"
+                                                        aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                                                    </div>
                                                 </div>
 
                                                 <div class="d-flex align-items-center my-2">
@@ -348,12 +360,14 @@
                                             <div class="custom-block-body">
                                                 <h5 class="mb-3">Supply drinking water</h5>
 
-                                                <p>Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+                                                <p>Orci varius natoque penatibus et magnis dis parturient montes,
+                                                    nascetur ridiculus
                                                 </p>
 
                                                 <div class="progress mt-4">
-                                                    <div class="progress-bar w-100" role="progressbar" aria-valuenow="100"
-                                                        aria-valuemin="0" aria-valuemax="100"></div>
+                                                    <div class="progress-bar w-100" role="progressbar"
+                                                        aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                                                    </div>
                                                 </div>
 
                                                 <div class="d-flex align-items-center my-2">
@@ -385,19 +399,20 @@
                                 <div class="col-lg-6 col-12">
                                     <h2 class="text-white mb-4">Volunteer</h2>
 
-                                    <form class="custom-form volunteer-form mb-5 mb-lg-0" action="#" method="post" role="form">
+                                    <form class="custom-form volunteer-form mb-5 mb-lg-0" action="#"
+                                        method="post" role="form">
                                         <h3 class="mb-4">Become a volunteer today</h3>
 
                                         <div class="row">
                                             <div class="col-lg-6 col-12">
-                                                <input type="text" name="volunteer-name" id="volunteer-name" class="form-control"
-                                                    placeholder="Jack Doe" required>
+                                                <input type="text" name="volunteer-name" id="volunteer-name"
+                                                    class="form-control" placeholder="Jack Doe" required>
                                             </div>
 
                                             <div class="col-lg-6 col-12">
                                                 <input type="email" name="volunteer-email" id="volunteer-email"
-                                                    pattern="[^ @]*@[^ @]*" class="form-control" placeholder="Jackdoe@gmail.com"
-                                                    required>
+                                                    pattern="[^ @]*@[^ @]*" class="form-control"
+                                                    placeholder="Jackdoe@gmail.com" required>
                                             </div>
 
                                             <div class="col-lg-6 col-12">
@@ -409,7 +424,8 @@
                                                 <div class="input-group input-group-file">
                                                     <input type="file" class="form-control" id="inputGroupFile02">
 
-                                                    <label class="input-group-text" for="inputGroupFile02">Upload your CV</label>
+                                                    <label class="input-group-text" for="inputGroupFile02">Upload your
+                                                        CV</label>
 
                                                     <i class="bi-cloud-arrow-up ms-auto"></i>
                                                 </div>
@@ -430,7 +446,8 @@
                                     <div class="custom-block-body text-center">
                                         <h4 class="text-white mt-lg-3 mb-lg-3">About Volunteering</h4>
 
-                                        <p class="text-white">Lorem Ipsum dolor sit amet, consectetur adipsicing kengan omeg kohm
+                                        <p class="text-white">Lorem Ipsum dolor sit amet, consectetur adipsicing kengan
+                                            omeg kohm
                                             tokito Professional charity theme based</p>
                                     </div>
                                 </div>
@@ -491,12 +508,14 @@
                                             </div>
 
                                             <div class="news-block-title mb-2">
-                                                <h4><a href="news-detail.html" class="news-block-title-link">Clothing donation to
+                                                <h4><a href="news-detail.html" class="news-block-title-link">Clothing
+                                                        donation to
                                                         urban area</a></h4>
                                             </div>
 
                                             <div class="news-block-body">
-                                                <p>Lorem Ipsum dolor sit amet, consectetur adipsicing kengan omeg kohm tokito
+                                                <p>Lorem Ipsum dolor sit amet, consectetur adipsicing kengan omeg kohm
+                                                    tokito
                                                     Professional charity theme based on Bootstrap</p>
                                             </div>
                                         </div>
@@ -549,12 +568,14 @@
                                             </div>
 
                                             <div class="news-block-title mb-2">
-                                                <h4><a href="news-detail.html" class="news-block-title-link">Food donation area</a>
+                                                <h4><a href="news-detail.html" class="news-block-title-link">Food
+                                                        donation area</a>
                                                 </h4>
                                             </div>
 
                                             <div class="news-block-body">
-                                                <p>Sed leo nisl, posuere at molestie ac, suscipit auctor mauris. Etiam quis metus
+                                                <p>Sed leo nisl, posuere at molestie ac, suscipit auctor mauris. Etiam
+                                                    quis metus
                                                     elementum, tempor risus vel, condimentum orci</p>
                                             </div>
                                         </div>
@@ -562,8 +583,10 @@
                                 </div>
 
                                 <div class="col-lg-4 col-12 mx-auto">
-                                    <form class="custom-form search-form" action="#" method="post" role="form">
-                                        <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                                    <form class="custom-form search-form" action="#" method="post"
+                                        role="form">
+                                        <input class="form-control" type="search" placeholder="Search"
+                                            aria-label="Search">
 
                                         <button type="submit" class="form-control">
                                             <i class="bi-search"></i>
@@ -582,7 +605,8 @@
 
                                         <div class="news-block-two-col-info">
                                             <div class="news-block-title mb-2">
-                                                <h6><a href="news-detail.html" class="news-block-title-link">Food donation area</a>
+                                                <h6><a href="news-detail.html" class="news-block-title-link">Food
+                                                        donation area</a>
                                                 </h6>
                                             </div>
 
@@ -605,7 +629,8 @@
 
                                         <div class="news-block-two-col-info">
                                             <div class="news-block-title mb-2">
-                                                <h6><a href="news-detail.html" class="news-block-title-link">Volunteering Clean</a>
+                                                <h6><a href="news-detail.html"
+                                                        class="news-block-title-link">Volunteering Clean</a>
                                                 </h6>
                                             </div>
 
@@ -679,11 +704,13 @@
                                         </a>
                                     </div>
 
-                                    <form class="custom-form subscribe-form" action="#" method="post" role="form">
+                                    <form class="custom-form subscribe-form" action="#" method="post"
+                                        role="form">
                                         <h5 class="mb-4">Newsletter Form</h5>
 
-                                        <input type="email" name="subscribe-email" id="subscribe-email" pattern="[^ @]*@[^ @]*"
-                                            class="form-control" placeholder="Email Address" required>
+                                        <input type="email" name="subscribe-email" id="subscribe-email"
+                                            pattern="[^ @]*@[^ @]*" class="form-control" placeholder="Email Address"
+                                            required>
 
                                         <div class="col-lg-12 col-12">
                                             <button type="submit" class="form-control">Subscribe</button>
@@ -703,66 +730,79 @@
                                 <div class="col-lg-8 col-12 mx-auto">
                                     <h2 class="mb-lg-3">Happy customers</h2>
 
-                                    <div id="testimonial-carousel" class="carousel carousel-fade slide" data-bs-ride="carousel">
+                                    <div id="testimonial-carousel" class="carousel carousel-fade slide"
+                                        data-bs-ride="carousel">
 
                                         <div class="carousel-inner">
                                             <div class="carousel-item active">
                                                 <div class="carousel-caption">
-                                                    <h4 class="carousel-title">Lorem Ipsum dolor sit amet, consectetur adipsicing
+                                                    <h4 class="carousel-title">Lorem Ipsum dolor sit amet, consectetur
+                                                        adipsicing
                                                         kengan omeg kohm tokito charity theme</h4>
 
-                                                    <small class="carousel-name"><span class="carousel-name-title">Maria</span>,
+                                                    <small class="carousel-name"><span
+                                                            class="carousel-name-title">Maria</span>,
                                                         Boss</small>
                                                 </div>
                                             </div>
 
                                             <div class="carousel-item">
                                                 <div class="carousel-caption">
-                                                    <h4 class="carousel-title">Sed leo nisl, posuere at molestie ac, suscipit auctor
+                                                    <h4 class="carousel-title">Sed leo nisl, posuere at molestie ac,
+                                                        suscipit auctor
                                                         mauris quis metus tempor orci</h4>
 
-                                                    <small class="carousel-name"><span class="carousel-name-title">Thomas</span>,
+                                                    <small class="carousel-name"><span
+                                                            class="carousel-name-title">Thomas</span>,
                                                         Partner</small>
                                                 </div>
                                             </div>
 
                                             <div class="carousel-item">
                                                 <div class="carousel-caption">
-                                                    <h4 class="carousel-title">Lorem Ipsum dolor sit amet, consectetur adipsicing
+                                                    <h4 class="carousel-title">Lorem Ipsum dolor sit amet, consectetur
+                                                        adipsicing
                                                         kengan omeg kohm tokito charity theme</h4>
 
-                                                    <small class="carousel-name"><span class="carousel-name-title">Jane</span>,
+                                                    <small class="carousel-name"><span
+                                                            class="carousel-name-title">Jane</span>,
                                                         Advisor</small>
                                                 </div>
                                             </div>
 
                                             <div class="carousel-item">
                                                 <div class="carousel-caption">
-                                                    <h4 class="carousel-title">Sed leo nisl, posuere at molestie ac, suscipit auctor
+                                                    <h4 class="carousel-title">Sed leo nisl, posuere at molestie ac,
+                                                        suscipit auctor
                                                         mauris quis metus tempor orci</h4>
 
-                                                    <small class="carousel-name"><span class="carousel-name-title">Bob</span>,
+                                                    <small class="carousel-name"><span
+                                                            class="carousel-name-title">Bob</span>,
                                                         Entreprenuer</small>
                                                 </div>
                                             </div>
 
                                             <ol class="carousel-indicators">
-                                                <li data-bs-target="#testimonial-carousel" data-bs-slide-to="0" class="active">
+                                                <li data-bs-target="#testimonial-carousel" data-bs-slide-to="0"
+                                                    class="active">
                                                     <img src="{{ asset('public/img/avatar/portrait-beautiful-young-woman-standing-grey-wall.jpg') }}"
                                                         class="img-fluid rounded-circle avatar-image" alt="avatar">
                                                 </li>
 
-                                                <li data-bs-target="#testimonial-carousel" data-bs-slide-to="1" class="">
+                                                <li data-bs-target="#testimonial-carousel" data-bs-slide-to="1"
+                                                    class="">
                                                     <img src="{{ asset('public/img/avatar/portrait-young-redhead-bearded-male.jpg') }}"
                                                         class="img-fluid rounded-circle avatar-image" alt="avatar">
                                                 </li>
 
-                                                <li data-bs-target="#testimonial-carousel" data-bs-slide-to="2" class="">
+                                                <li data-bs-target="#testimonial-carousel" data-bs-slide-to="2"
+                                                    class="">
                                                     <img src="{{ asset('public/img/avatar/pretty-blonde-woman-wearing-white-t-shirt.jpg') }}"
                                                         class="img-fluid rounded-circle avatar-image" alt="avatar">
                                                 </li>
 
-                                                <li data-bs-target="#testimonial-carousel" data-bs-slide-to="3" class="">
+                                                <li data-bs-target="#testimonial-carousel" data-bs-slide-to="3"
+                                                    class="">
                                                     <img src="{{ asset('public/img/avatar/studio-portrait-emotional-happy-funny.jpg') }}"
                                                         class="img-fluid rounded-circle avatar-image" alt="avatar">
                                                 </li>
@@ -825,7 +865,8 @@
                                 </div>
 
                                 <div class="col-lg-5 col-12 mx-auto">
-                                    <form class="custom-form contact-form" action="#" method="post" role="form">
+                                    <form class="custom-form contact-form" action="#" method="post"
+                                        role="form">
                                         <h2>Contact form</h2>
 
                                         <p class="mb-4">Or, you can just send an email:
@@ -833,21 +874,20 @@
                                         </p>
                                         <div class="row">
                                             <div class="col-lg-6 col-md-6 col-12">
-                                                <input type="text" name="first-name" id="first-name" class="form-control"
-                                                    placeholder="Jack" required>
+                                                <input type="text" name="first-name" id="first-name"
+                                                    class="form-control" placeholder="Jack" required>
                                             </div>
 
                                             <div class="col-lg-6 col-md-6 col-12">
-                                                <input type="text" name="last-name" id="last-name" class="form-control"
-                                                    placeholder="Doe" required>
+                                                <input type="text" name="last-name" id="last-name"
+                                                    class="form-control" placeholder="Doe" required>
                                             </div>
                                         </div>
 
-                                        <input type="email" name="email" id="email" pattern="[^ @]*@[^ @]*" class="form-control"
-                                            placeholder="Jackdoe@gmail.com" required>
+                                        <input type="email" name="email" id="email" pattern="[^ @]*@[^ @]*"
+                                            class="form-control" placeholder="Jackdoe@gmail.com" required>
 
-                                        <textarea name="message" rows="5" class="form-control" id="message"
-                                            placeholder="What can we help you?"></textarea>
+                                        <textarea name="message" rows="5" class="form-control" id="message" placeholder="What can we help you?"></textarea>
 
                                         <button type="submit" class="form-control">Send Message</button>
                                     </form>
@@ -858,10 +898,10 @@
                     </section>
                 </main>
             </div>
-            @include('layoutsHome.footer')
+            @include('layouts.landing.partials.footer')
         </div>
     </div>
-    @include('layoutsHome.scripts')
+    @include('layouts.landing.partials.scripts')
 </body>
 
 </html>

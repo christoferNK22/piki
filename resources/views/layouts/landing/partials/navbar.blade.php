@@ -26,9 +26,8 @@
                 </li>
 
                 <li class="nav-item dropdown">
-                    <a class="nav-link click-scroll dropdown-toggle" href="#section_3"
-                        id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">Berita</a>
+                    <a class="nav-link click-scroll dropdown-toggle" href="#section_3" id="navbarLightDropdownMenuLink"
+                        role="button" data-bs-toggle="dropdown" aria-expanded="false">Berita</a>
 
                     <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
                         <li><a class="dropdown-item" href="news.html">Berita Baru</a></li>
@@ -48,7 +47,7 @@
                 </li>
 
                 <li class="nav-item ms-3">
-                    <a class="nav-link custom-btn custom-border-btn btn" href="{{ route('home.member') }}">Member</a>
+                    <a class="nav-link custom-btn custom-border-btn btn" href="#">Member</a>
                 </li>
             </ul>
         </div>
