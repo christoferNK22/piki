@@ -6,6 +6,7 @@ use App\Livewire\Admin\Church\ChurchIndex;
 use App\Livewire\Admin\Church\ChurchCreate;
 use App\Livewire\Admin\Church\ChurchEdit;
 use App\Livewire\Admin\Dashboard;
+use App\Livewire\Member\Dashboard as MemberDashboard;
 use App\Livewire\Admin\Interest\InterestIndex;
 use App\Livewire\Admin\Interest\InterestCreate;
 use App\Livewire\Admin\Interest\InterestEdit;
@@ -61,5 +62,5 @@ Route::prefix('admin/')->group(function () {
 Route::prefix("member/")->name('member.')->group(function () {
     Route::get('register', Register::class)->name('register');
     Route::get('login', AuthLogin::class)->name('login');
-    Route::get('')->name('');
+    Route::get('/', MemberDashboard::class)->middleware('role:member')->name('dashboard');
 });

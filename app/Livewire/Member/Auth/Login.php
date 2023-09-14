@@ -19,7 +19,7 @@ class Login extends Component
         if (auth('member')->attempt([
             'email' => $this->email,
             'password' => $this->password
-        ])) dd("Berhasil login member");
+        ])) return redirect(route('member.dashboard'));
         return redirect(route('login'))->with('error', "Gagal Login");
     }
 
