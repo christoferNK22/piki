@@ -29,7 +29,11 @@ Route::get('/', function () {
 
 Route::prefix('admin/')->group(function () {
     Route::get('login', Login::class)->name('login');
-    Route::middleware('auth')->group(function () {
+    Route::middleware('auth', 'role:web')->group(function () {
+        Route::get('logout', function () {
+            auth('web')->logout();
+            return redirect(route('login'));
+        })->name('logout');
         Route::get("", Dashboard::class)->name('dashboard');
         Route::name('master.')->group(function () {
             Route::prefix('church')->name('church.')->group(function () {
