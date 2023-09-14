@@ -47,7 +47,7 @@
                 </li>
 
                 <li class="nav-item ms-3">
-                    <a class="nav-link custom-btn custom-border-btn btn" href="#">Member</a>
+                    <a class="nav-link custom-btn custom-border-btn btn" href="{{route('member.register')}}">Member</a>
                 </li>
             </ul>
         </div>

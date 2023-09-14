@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire\Interest;
+namespace App\Livewire\Admin\Interest;
 
 use App\Models\Interest;
 use Livewire\Component;
@@ -9,26 +9,26 @@ class InterestEdit extends Component
 {
     public $data;
     public string $name = "";
-    public string $address = "";
+    public string $code = "";
 
     public function mount($id)
     {
         $this->data = Interest::findOrFail($id);
         $this->name = $this->data->name;
-        $this->address = $this->data->address;
+        $this->code = $this->data->code;
     }
 
     public function save()
     {
         $this->data->update([
             'name' => $this->name,
-            'address' => $this->address
+            'code' => $this->code
         ]);
         return redirect(route('master.interest.index'));
     }
 
     public function render()
     {
-        return view('livewire.interest.interest-form');
+        return view('livewire.admin.interest.interest-form');
     }
 }

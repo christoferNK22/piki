@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire\Interest;
+namespace App\Livewire\Admin\Interest;
 
 use App\Models\Interest;
 use Livewire\Component;
@@ -22,6 +22,6 @@ class InterestIndex extends Component
     }
     public function render()
     {
-        return view('livewire.interest.interest-index')->title('Bidang Minat');
+        return view('livewire.admin.interest.interest-index')->title('Bidang Minat');
     }
 }

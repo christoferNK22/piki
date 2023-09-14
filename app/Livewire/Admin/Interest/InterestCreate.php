@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire\Interest;
+namespace App\Livewire\Admin\Interest;
 
 use App\Models\Interest;
 use Livewire\Component;
@@ -8,19 +8,19 @@ use Livewire\Component;
 class InterestCreate extends Component
 {
     public string $name = "";
-    public string $address = "";
+    public string $code = "";
 
     public function save()
     {
         Interest::create([
             'name' => $this->name,
-            'address' => $this->address
+            'code' => $this->code
         ]);
         return redirect(route('master.interest.index'));
     }
 
     public function render()
     {
-        return view('livewire.interest.interest-form');
+        return view('livewire.admin.interest.interest-form');
     }
 }

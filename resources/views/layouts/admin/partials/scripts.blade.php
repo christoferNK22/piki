@@ -21,14 +21,18 @@
   <script src="{{ asset('/js/scripts.js') }}"></script>
   <script src="{{ asset('/js/custom.js') }}"></script>
 
-
+  @livewireScripts
   <script>
+      document.addEventListener("DOMContentLoaded", () => {
+          Livewire.on('showError', (error) => {
+              iziToast.error({
+                  title: 'Gagal',
+                  message: error,
+                  position: 'topRight'
+              });
+          })
+      })
       @if (session()->has('error'))
-          iziToast.error({
-              title: 'Gagal',
-              message: '{{ session()->get('error') }}',
-              position: 'topRight'
-          });
       @endif
       @if (session()->has('status'))
           iziToast.success({

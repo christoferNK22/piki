@@ -31,6 +31,17 @@ class Member extends Authenticatable
         'remember_token',
     ];
     protected $appends = ["member_identity"];
+
+    protected static function boot()
+    {
+        parent::boot();
+
+        static::creating(function ($model) {
+            $model->password = bcrypt($model->password);
+            $model->is_verified = 0;
+        });
+    }
+
     public function memberIdentity(): Attribute
     {
         return Attribute::make(
