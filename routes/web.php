@@ -9,6 +9,7 @@ use App\Livewire\Admin\Dashboard;
 use App\Livewire\Admin\Interest\InterestIndex;
 use App\Livewire\Admin\Interest\InterestCreate;
 use App\Livewire\Admin\Interest\InterestEdit;
+use App\Livewire\Member\Auth\Login as AuthLogin;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -55,6 +56,6 @@ Route::prefix('admin/')->group(function () {
 
 Route::prefix("member/")->name('member.')->group(function () {
     Route::get('register', Register::class)->name('register');
-    Route::get('login')->name('member');
+    Route::get('login', AuthLogin::class)->name('login');
     Route::get('')->name('');
 });

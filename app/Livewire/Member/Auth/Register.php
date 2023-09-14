@@ -76,7 +76,7 @@ class Register extends Component
             'interest_id' => $this->interestId,
         ]);
 
-        return redirect(route('member.register'))->with('status', 'Registrasi Berhasil');
+        return redirect(route('member.login'))->with('status', 'Registrasi Berhasil');
     }
 
     #[Layout("layouts.admin.base")]
