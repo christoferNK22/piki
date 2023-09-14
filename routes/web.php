@@ -10,6 +10,9 @@ use App\Livewire\Member\Dashboard as MemberDashboard;
 use App\Livewire\Admin\Interest\InterestIndex;
 use App\Livewire\Admin\Interest\InterestCreate;
 use App\Livewire\Admin\Interest\InterestEdit;
+use App\Livewire\Admin\Member\MemberIndex;
+use App\Livewire\Admin\Member\MemberCreate;
+use App\Livewire\Admin\Member\MemberEdit;
 use App\Livewire\Member\Auth\Login as AuthLogin;
 use Illuminate\Support\Facades\Route;
 
@@ -51,9 +54,10 @@ Route::prefix('admin/')->group(function () {
                 Route::get('', fn () => view('master.education.index'))->name('index');
                 Route::get('create', fn () => view('master.education.create'))->name('create');
             });
-            Route::prefix('admin')->name('admin.')->group(function () {
-                Route::get('', fn () => view('master.admin.index'))->name('index');
-                Route::get('create', fn () => view('master.admin.create'))->name('create');
+            Route::prefix('member')->name('member.')->group(function () {
+                Route::get('', MemberIndex::class)->name('index');
+                Route::get('create', MemberCreate::class)->name('create');
+                Route::get('edit/{id}', MemberEdit::class)->name('edit');
             });
         });
     });

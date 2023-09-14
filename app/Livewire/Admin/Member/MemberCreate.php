@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Livewire\Member;
+namespace App\Livewire\Admin\Member;
 
 use App\Models\Member;
+use Illuminate\Support\Facades\Hash;
 use Livewire\Component;
 
-class Dashboard extends Component
+class MemberCreate extends Component
 {
-    public $data;
     public $name;
     public $email;
     public $bod;
@@ -21,28 +21,12 @@ class Dashboard extends Component
     public $educationId = "";
     public $interestId = "";
 
-    public function mount()
-    {
-        $id = auth('member')->user()->id;
-        $this->data = Member::findOrFail($id);
-        $this->name = $this->data->name;
-        $this->email = $this->data->email;
-        $this->bod = $this->data->bod;
-        $this->address = $this->data->address;
-        $this->contact = $this->data->contact;
-        $this->gender = $this->data->gender;
-        $this->yearIn = $this->data->year_in;
-        $this->churchId = $this->data->church_id;
-        $this->educationId = $this->data->education_id;
-        $this->interestId = $this->data->interest_id;
-    }
-
     public function save()
     {
-        $this->data->update([
+        Member::create([
             'name' => $this->name,
             'email' => $this->email,
-            'password' => bcrypt($this->password),
+            'password' => Hash::make($this->password),
             'bod' => $this->bod,
             'address' => $this->address,
             'contact' => $this->contact,
@@ -52,7 +36,7 @@ class Dashboard extends Component
             'education_id' => $this->educationId,
             'interest_id' => $this->interestId,
         ]);
-        return redirect(route('member.dashboard'));
+        return redirect(route('master.member.index'));
     }
 
     public function render()
