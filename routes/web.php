@@ -1,7 +1,7 @@
 <?php
 
 use App\Livewire\Admin\Auth\Login;
-use App\Livewire\Admin\Auth\Register;
+use App\Livewire\Member\Auth\Register;
 use App\Livewire\Admin\Church\ChurchIndex;
 use App\Livewire\Admin\Church\ChurchCreate;
 use App\Livewire\Admin\Church\ChurchEdit;
@@ -9,8 +9,6 @@ use App\Livewire\Admin\Dashboard;
 use App\Livewire\Admin\Interest\InterestIndex;
 use App\Livewire\Admin\Interest\InterestCreate;
 use App\Livewire\Admin\Interest\InterestEdit;
-use App\Models\Interest;
-use App\Models\Member;
 use Illuminate\Support\Facades\Route;
 
 /*

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire\Admin\Auth;
+namespace App\Livewire\Member\Auth;
 
 use Livewire\Component;
 use Illuminate\Support\Facades\Hash;
@@ -85,7 +85,6 @@ class Register extends Component
         $churches = Church::all();
         $educations = Education::all();
         $interests = Interest::all();
-        // dd(compact('churches', 'educations', 'interests'));
-        return view('livewire.landing.auth.register', compact('churches', 'educations', 'interests'))->title("Register");
+        return view('livewire.member.auth.register', compact('churches', 'educations', 'interests'))->title("Register");
     }
 }
