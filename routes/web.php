@@ -67,4 +67,8 @@ Route::prefix("member/")->name('member.')->group(function () {
     Route::get('register', Register::class)->name('register');
     Route::get('login', AuthLogin::class)->name('login');
     Route::get('/', MemberDashboard::class)->middleware('role:member')->name('dashboard');
+    Route::get('logout', function () {
+        auth('member')->logout();
+        return redirect(route('member.login'));
+    })->name('logout');
 });
