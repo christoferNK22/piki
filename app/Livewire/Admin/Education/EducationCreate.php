@@ -1,26 +1,24 @@
 <?php
 
-namespace App\Livewire\Admin\Church;
+namespace App\Livewire\Admin\Education;
 
-use App\Models\Church;
+use App\Models\Education;
 use Livewire\Component;
 
-class ChurchCreate extends Component
+class EducationCreate extends Component
 {
     public string $name = "";
-    public string $address = "";
 
     public function save()
     {
-        Church::create([
+        Education::create([
             'name' => $this->name,
-            'address' => $this->address
         ]);
-        return redirect(route('master.church.index'));
+        return redirect(route('master.education.index'));
     }
 
     public function render()
     {
-        return view('livewire.admin.church.church-form');
+        return view('livewire.admin.education.education-form');
     }
 }

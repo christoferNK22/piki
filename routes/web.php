@@ -7,6 +7,9 @@ use App\Livewire\Admin\Church\ChurchCreate;
 use App\Livewire\Admin\Church\ChurchEdit;
 use App\Livewire\Admin\Dashboard;
 use App\Livewire\Member\Dashboard as MemberDashboard;
+use App\Livewire\Admin\Education\EducationIndex;
+use App\Livewire\Admin\Education\EducationCreate;
+use App\Livewire\Admin\Education\EducationEdit;
 use App\Livewire\Admin\Interest\InterestIndex;
 use App\Livewire\Admin\Interest\InterestCreate;
 use App\Livewire\Admin\Interest\InterestEdit;
@@ -51,8 +54,9 @@ Route::prefix('admin/')->group(function () {
                 Route::get('edit/{id}', InterestEdit::class)->name('edit');
             });
             Route::prefix('education')->name('education.')->group(function () {
-                Route::get('', fn () => view('master.education.index'))->name('index');
-                Route::get('create', fn () => view('master.education.create'))->name('create');
+                Route::get('', EducationIndex::class)->name('index');
+                Route::get('create', EducationCreate::class)->name('create');
+                Route::get('edit/{id}', EducationEdit::class)->name('edit');
             });
             Route::prefix('member')->name('member.')->group(function () {
                 Route::get('', MemberIndex::class)->name('index');
