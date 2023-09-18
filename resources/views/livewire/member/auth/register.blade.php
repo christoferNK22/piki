@@ -125,7 +125,7 @@
                                     </button>
                                 </div>
                                 <div class="col-md">
-                                    <p style="text-align: right;">Sudah punya akun? 
+                                    <p style="text-align: center;">Sudah punya akun? 
                                         <a href="{{ route('login') }}">Masuk</a>
                                     </p>
                                 </div>
