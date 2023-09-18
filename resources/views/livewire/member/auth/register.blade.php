@@ -124,6 +124,11 @@
                                         Register
                                     </button>
                                 </div>
+                                <div class="col-md">
+                                    <p style="text-align: right;">Sudah punya akun? 
+                                        <a href="{{ route('login') }}">Masuk</a>
+                                    </p>
+                                </div>
                             </form>
                         </div>
                     </div>
