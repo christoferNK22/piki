@@ -8,9 +8,12 @@ use App\Models\Interest;
 use App\Models\Education;
 use Illuminate\Support\Facades\Hash;
 use Livewire\Component;
+use Livewire\WithFileUploads;
 
 class MemberCreate extends Component
 {
+    use WithFileUploads;
+
     public $name;
     public $email;
     public $bod;
@@ -23,9 +26,15 @@ class MemberCreate extends Component
     public $churchId = "";
     public $educationId = "";
     public $interestId = "";
+    public $image;
 
     public function save()
     {
+        $imagePath = null;
+        if (!empty($this->image)) {
+            $imagePath = $this->image->store('member');
+        }
+
         Member::create([
             'name' => $this->name,
             'email' => $this->email,
@@ -38,6 +47,7 @@ class MemberCreate extends Component
             'church_id' => $this->churchId,
             'education_id' => $this->educationId,
             'interest_id' => $this->interestId,
+            'image_path' => $imagePath,
         ]);
         return redirect(route('master.member.index'));
     }

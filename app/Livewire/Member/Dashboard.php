@@ -7,9 +7,12 @@ use App\Models\Church;
 use App\Models\Interest;
 use App\Models\Education;
 use Livewire\Component;
+use Livewire\WithFileUploads;
 
 class Dashboard extends Component
 {
+    use WithFileUploads;
+
     public $data;
     public $name;
     public $email;
@@ -23,6 +26,8 @@ class Dashboard extends Component
     public $churchId = "";
     public $educationId = "";
     public $interestId = "";
+    public $image;
+    public $currentImagePath;
 
     public function mount()
     {
@@ -38,10 +43,16 @@ class Dashboard extends Component
         $this->churchId = $this->data->church_id;
         $this->educationId = $this->data->education_id;
         $this->interestId = $this->data->interest_id;
+        $this->currentImagePath = $this->data->image_path;
     }
 
     public function save()
     {
+        $imagePath = null;
+        if (!empty($this->image)) {
+            $imagePath = $this->image->store('member');
+        }
+
         $this->data->update([
             'name' => $this->name,
             'email' => $this->email,
@@ -54,6 +65,7 @@ class Dashboard extends Component
             'church_id' => $this->churchId,
             'education_id' => $this->educationId,
             'interest_id' => $this->interestId,
+            'image_path' => $imagePath,
         ]);
         return redirect(route('member.dashboard'));
     }

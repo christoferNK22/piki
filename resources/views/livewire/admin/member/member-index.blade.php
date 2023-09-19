@@ -51,12 +51,16 @@
                                         {{ $data->interest->name }}
                                     </td>
                                     <td class="align-middle">
-                                        @if ($data->is_verified)
-                                            <div class="badge badge-pill badge-primary mb-1 float-right">Aktif</div>
-                                        @else
-                                            <div class="badge badge-pill badge-warning mb-1 float-right">Belum aktif
-                                            </div>
-                                        @endif
+                                        <figure class="avatar mr-2 avatar-xl">
+                                            <img src="{{ asset(!empty($data->image_path) ? "storage/{$data->image_path}" : 'img/avatar/avatar-1.png') }}"
+                                                alt="{{ $data->name }}">
+                                            @if ($data->is_verified)
+                                                <i class="avatar-presence online"></i>
+                                            @else
+                                                <i class="avatar-presence busy"></i>
+                                            @endif
+                                        </figure>
+
                                     </td>
                                     <td>
                                         <a href="{{ route('master.member.edit', ['id' => $data->id]) }}"
