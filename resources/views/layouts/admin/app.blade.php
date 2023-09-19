@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-    <title>@yield('title', $title) - PIKI</title>
+    <title>@yield('title', $title ?? 'Dashboard') - PIKI</title>
     @include('layouts.admin.partials.css')
 </head>
 
@@ -19,7 +19,7 @@
             <div class="main-content">
                 <section class="section">
                     <div class="section-header">
-                        <h1>@yield('title', $title)</h1>
+                        <h1>@yield('title', $title ?? 'Dashboard')</h1>
                     </div>
 
                     <div class="section-body">
