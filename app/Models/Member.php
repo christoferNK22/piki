@@ -31,6 +31,7 @@ class Member extends Authenticatable
         'remember_token',
     ];
     protected $appends = ["member_identity"];
+    protected $casts = ['is_verified' => 'boolean'];
 
     protected static function boot()
     {

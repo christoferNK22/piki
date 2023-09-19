@@ -14,7 +14,9 @@
                                 <th>No</th>
                                 <th>Member</th>
                                 <th>Nama</th>
+                                <th>Email</th>
                                 <th>Alamat</th>
+                                <th>Status</th>
                                 <th>Edit</th>
                             </tr>
                         </thead>
@@ -31,10 +33,24 @@
                                         {{ $data->name }}
                                     </td>
                                     <td class="align-middle">
+                                        {{ $data->email }}
+                                    </td>
+                                    <td class="align-middle">
                                         {{ $data->address }}
+                                    </td>
+                                    <td class="align-middle">
+                                        @if ($data->is_verified)
+                                            <div class="badge badge-pill badge-primary mb-1 float-right">Aktif</div>
+                                        @else
+                                            <div class="badge badge-pill badge-warning mb-1 float-right">Belum aktif
+                                            </div>
+                                        @endif
+                                    </td>
                                     <td>
                                         <a href="{{ route('master.member.edit', ['id' => $data->id]) }}"
                                             class="btn btn-secondary">Edit</a>
+                                        <button wire:click="toggleVerifiedMember({{ $data->id }})"
+                                            class="btn btn-warning">{{ $data->is_verified ? 'Non Active' : 'Active' }}</button>
                                         <button wire:click="delete({{ $data->id }})"
                                             class="btn btn-danger">Delete</button>
                                     </td>

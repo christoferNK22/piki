@@ -17,7 +17,14 @@ class MemberIndex extends Component
     public function delete($id)
     {
         Member::findOrFail($id)->delete();
-        return redirect(route('master.member.index'));
+        return redirect(route('master.member.index'))->with('status', 'OK');
+    }
+    public function toggleVerifiedMember($id)
+    {
+        $member = Member::findOrFail($id);
+        $member->is_verified = $member->is_verified ? 0 : 1;
+        $member->save();
+        return redirect(route('master.member.index'))->with('status', 'OK');
     }
     public function render()
     {
