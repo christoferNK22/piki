@@ -34,7 +34,7 @@
 
                         <li><a class="dropdown-item" href="news-photo.html">Berita Foto</a></li>
 
-                        <li><a class="dropdown-item" href="news-video.html">Berita Video</a></li>
+                        <li><a class="dropdown-item" href="">Berita Video</a></li>
                     </ul>
                 </li>
 

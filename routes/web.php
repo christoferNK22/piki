@@ -35,7 +35,6 @@ Route::get('/', function () {
 })->name('home');
 
 Route::prefix('beranda/')->group(function () {
-    
 });
 
 Route::name('landing.')->group(function () {
@@ -81,9 +80,6 @@ Route::prefix('admin/')->group(function () {
 
 Route::prefix("member/")->name('member.')->group(function () {
     Route::get('register', Register::class)->name('register');
-    Route::get('login', function () {
-        return view('livewire.member.auth.login');
-    })->name('login');
     Route::get('login', AuthLogin::class)->name('login');
     // Route::get('register', function () {
     //     return view('livewire.member.auth.register');

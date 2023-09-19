@@ -46,6 +46,11 @@
                                         Login
                                     </button>
                                 </div>
+                                <div class="col-md">
+                                    <p style="text-align: right;">Belum Punya Akun ?
+                                        <a href="{{ route('member.register') }}">Daftar</a>
+                                    </p>
+                                </div>
                             </form>
 
                         </div>
