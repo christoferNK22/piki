@@ -9,7 +9,7 @@
             <a href="index.html">PIKI</a>
         </div>
         <ul class="sidebar-menu">
-            @if (auth('member')->check() && !auth('web')->check())
+            @if (request()->route()->getName() === 'member.dashboard')
                 <li class="menu-header">Form Member</li>
                 <li class="dropdown">
                     <a href="{{ route('member.dashboard') }}" class="nav-link"><i class="fas fa-fire"></i><span>Form
