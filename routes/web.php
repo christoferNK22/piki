@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\GantiPasswordController;
 use App\Livewire\Admin\Auth\Login;
 use App\Livewire\Member\Auth\Register;
 use App\Livewire\Admin\Church\ChurchIndex;
@@ -78,11 +79,14 @@ Route::prefix('admin/')->group(function () {
 });
 
 Route::prefix("member/")->name('member.')->group(function () {
+    Route::middleware('role:member')->group(function () {
+        Route::get('/', MemberDashboard::class)->name('dashboard');
+        Route::get('logout', function () {
+            auth('member')->logout();
+            return redirect(route('member.login'));
+        })->name('logout');
+        Route::post('/ganti_password', GantiPasswordController::class)->name('gantiPassword');
+    });
     Route::get('register', Register::class)->name('register');
     Route::get('login', AuthLogin::class)->name('login');
-    Route::get('/', MemberDashboard::class)->middleware('role:member')->name('dashboard');
-    Route::get('logout', function () {
-        auth('member')->logout();
-        return redirect(route('member.login'));
-    })->name('logout');
 });

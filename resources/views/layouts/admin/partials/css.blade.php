@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="{{ asset('modules/datatables/DataTables-1.10.16/css/dataTables.bootstrap4.min.css') }}">
 <link rel="stylesheet" href="{{ asset('modules/datatables/Select-1.2.4/css/select.bootstrap4.min.css') }}">
 <link rel="stylesheet" href="{{ asset('modules/izitoast/css/iziToast.min.css') }}">
+<link rel="stylesheet" href="{{ asset('modules/prism/prism.css') }}">
 
 <!-- Template CSS -->
 <link rel="stylesheet" href="{{ asset('css/style.css') }}">

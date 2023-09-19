@@ -15,12 +15,12 @@ class Login extends Component
     public function auth()
     {
         if (Member::where('email', $this->email)->get()->count() == 0)
-            return redirect(route('login'))->with('error', "Member tdk ada");
+            return redirect(route('member.login'))->with('error', "Member tdk ada");
         if (auth('member')->attempt([
             'email' => $this->email,
             'password' => $this->password
         ])) return redirect(route('member.dashboard'));
-        return redirect(route('login'))->with('error', "Gagal Login");
+        return redirect(route('member.login'))->with('error', "Gagal Login");
     }
 
     #[Layout("layouts.admin.base")]
