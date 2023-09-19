@@ -3,6 +3,9 @@
 namespace App\Livewire\Admin\Member;
 
 use App\Models\Member;
+use App\Models\Church;
+use App\Models\Interest;
+use App\Models\Education;
 use Illuminate\Support\Facades\Hash;
 use Livewire\Component;
 
@@ -41,6 +44,9 @@ class MemberCreate extends Component
 
     public function render()
     {
-        return view('livewire.admin.member.member-form')->title('Tambah Member');
+        $churches = Church::all();
+        $educations = Education::all();
+        $interests = Interest::all();
+        return view('livewire.admin.member.member-form', compact('churches', 'educations', 'interests'))->title("Tambah Member");
     }
 }

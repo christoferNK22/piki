@@ -3,6 +3,9 @@
 namespace App\Livewire\Member;
 
 use App\Models\Member;
+use App\Models\Church;
+use App\Models\Interest;
+use App\Models\Education;
 use Livewire\Component;
 
 class Dashboard extends Component
@@ -57,6 +60,9 @@ class Dashboard extends Component
 
     public function render()
     {
-        return view('livewire.admin.member.member-form');
+        $churches = Church::all();
+        $educations = Education::all();
+        $interests = Interest::all();
+        return view('livewire.admin.member.member-form', compact('churches', 'educations', 'interests'));
     }
 }
