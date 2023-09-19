@@ -14,7 +14,6 @@
                                 <th>
                                     No
                                 </th>
-                                <th>ID</th>
                                 <th>Nama Gereja</th>
                                 <th>Alamat</th>
                                 <th>Edit</th>
@@ -25,9 +24,6 @@
                                 <tr>
                                     <td>
                                         {{ $i + 1 }}
-                                    </td>
-                                    <td class="align-middle">
-                                        {{ $data->id }}
                                     </td>
                                     <td class="align-middle">
                                         {{ $data->name }}
