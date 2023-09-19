@@ -17,6 +17,8 @@
                                 <th>Tanggal Lahir</th>
                                 <th>Email</th>
                                 <th>Alamat</th>
+                                <th>Gereja</th>
+                                <th>Bidang Minat</th>
                                 <th>Status</th>
                                 <th>Edit</th>
                             </tr>
@@ -41,6 +43,12 @@
                                     </td>
                                     <td class="align-middle">
                                         {{ $data->address }}
+                                    </td>
+                                    <td class="align-middle">
+                                        {{ $data->church->name }}
+                                    </td>
+                                    <td class="align-middle">
+                                        {{ $data->interest->name }}
                                     </td>
                                     <td class="align-middle">
                                         @if ($data->is_verified)
