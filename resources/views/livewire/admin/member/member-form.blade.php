@@ -10,8 +10,16 @@
                         <input type="text" class="form-control" wire:model="name">
                     </div>
                     <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" class="form-control" wire:model="email">
+                    </div>
+                    <div class="form-group">
                         <label>Alamat</label>
                         <input type="text" class="form-control" wire:model="address">
+                    </div>
+                    <div class="form-group">
+                        <label>Tanggal Lahir</label>
+                        <input type="date" class="form-control" wire:model="bod">
                     </div>
                     <div class="form-group">
                         <button class="btn btn-primary">Simpan</button>

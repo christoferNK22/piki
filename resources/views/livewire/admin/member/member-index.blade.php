@@ -14,6 +14,7 @@
                                 <th>No</th>
                                 <th>Member</th>
                                 <th>Nama</th>
+                                <th>Tanggal Lahir</th>
                                 <th>Email</th>
                                 <th>Alamat</th>
                                 <th>Status</th>
@@ -31,6 +32,9 @@
                                     </td>
                                     <td class="align-middle">
                                         {{ $data->name }}
+                                    </td>
+                                    <td class="align-middle">
+                                        {{ $data->bod_format }}
                                     </td>
                                     <td class="align-middle">
                                         {{ $data->email }}
