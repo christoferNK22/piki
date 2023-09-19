@@ -29,6 +29,6 @@ class ChurchEdit extends Component
 
     public function render()
     {
-        return view('livewire.admin.church.church-form');
+        return view('livewire.admin.church.church-form')->title("Edit Gereja {$this->data->name}");
     }
 }

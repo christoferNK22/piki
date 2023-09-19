@@ -41,6 +41,6 @@ class MemberCreate extends Component
 
     public function render()
     {
-        return view('livewire.admin.member.member-form');
+        return view('livewire.admin.member.member-form')->title('Tambah Member');
     }
 }

@@ -21,6 +21,6 @@ class InterestCreate extends Component
 
     public function render()
     {
-        return view('livewire.admin.interest.interest-form');
+        return view('livewire.admin.interest.interest-form')->title('Tambah Bidang Minat');
     }
 }

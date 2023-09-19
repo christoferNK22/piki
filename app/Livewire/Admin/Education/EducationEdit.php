@@ -26,6 +26,6 @@ class EducationEdit extends Component
 
     public function render()
     {
-        return view('livewire.admin.education.education-form');
+        return view('livewire.admin.education.education-form')->title("Edit Edukasi {$this->data->name}");
     }
 }

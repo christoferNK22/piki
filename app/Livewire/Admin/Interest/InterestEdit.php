@@ -29,6 +29,6 @@ class InterestEdit extends Component
 
     public function render()
     {
-        return view('livewire.admin.interest.interest-form');
+        return view('livewire.admin.interest.interest-form')->title("Edit Bidang Minat {$this->data->name}");
     }
 }
