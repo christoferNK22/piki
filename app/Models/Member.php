@@ -24,6 +24,7 @@ class Member extends Authenticatable
         'church_id',
         'interest_id',
         'education_id',
+        'image_path',
         'is_verified',
     ];
 
