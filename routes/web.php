@@ -17,6 +17,7 @@ use App\Livewire\Admin\Member\MemberIndex;
 use App\Livewire\Admin\Member\MemberCreate;
 use App\Livewire\Admin\Member\MemberEdit;
 use App\Livewire\Member\Auth\Login as AuthLogin;
+use App\Models\Member;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -30,12 +31,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::get('/', function () {
     return view('livewire.landing.beranda');
 })->name('home');
-
-Route::prefix('beranda/')->group(function () {
-});
 
 Route::name('landing.')->group(function () {
     Route::prefix('beranda')->name('beranda.')->group(function () {
@@ -81,9 +80,6 @@ Route::prefix('admin/')->group(function () {
 Route::prefix("member/")->name('member.')->group(function () {
     Route::get('register', Register::class)->name('register');
     Route::get('login', AuthLogin::class)->name('login');
-    // Route::get('register', function () {
-    //     return view('livewire.member.auth.register');
-    // })->name('register');
     Route::get('/', MemberDashboard::class)->middleware('role:member')->name('dashboard');
     Route::get('logout', function () {
         auth('member')->logout();

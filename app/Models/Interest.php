@@ -10,4 +10,9 @@ class Interest extends Model
         'code',
         'name',
     ];
+
+    public function members()
+    {
+        return $this->hasMany(Member::class)->where('is_verified', 1);
+    }
 }

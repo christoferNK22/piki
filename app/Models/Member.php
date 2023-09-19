@@ -48,8 +48,17 @@ class Member extends Authenticatable
     {
         return Attribute::make(
             get: function () {
-                $interestCount = $this->interest()->where('id', $this->id)->count() + 1;
-                return $this->interest->code . "-" . $interestCount;
+                if (!$this->is_verified)
+                    return '-';
+                $interestMembers = Interest::find($this->interest_id)->members;
+                $count = 1;
+                foreach ($interestMembers as $member) {
+                    if ($member->id == $this->id) {
+                        break;
+                    }
+                    $count++;
+                }
+                return $this->interest->code . "-" . $count;
             }
         );
     }
