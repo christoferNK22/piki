@@ -12,7 +12,7 @@
             @if (request()->route()->getName() === 'member.dashboard')
                 <li class="menu-header">Form Member</li>
                 <li class="dropdown">
-                    <a href="{{ route('member.dashboard') }}" class="nav-link"><i class="fas fa-fire"></i><span>Form
+                    <a href="{{ route('member.dashboard') }}" class="nav-link"><i class="fas fa-users"></i><span>Form
                             Member</span></a>
                 </li>
             @else
