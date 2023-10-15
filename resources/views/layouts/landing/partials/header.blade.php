@@ -19,21 +19,10 @@
 
             <div class="col-lg-3 col-12 ms-auto d-lg-block d-none">
                 <ul class="social-icon">
-                    <li class="social-icon-item">
-                        <a href="#" class="social-icon-link bi-twitter"></a>
-                    </li>
-
-                    <li class="social-icon-item">
-                        <a href="#" class="social-icon-link bi-facebook"></a>
-                    </li>
-
-                    <li class="social-icon-item">
-                        <a href="#" class="social-icon-link bi-instagram"></a>
-                    </li>
-
-                    <li class="social-icon-item">
-                        <a href="#" class="social-icon-link bi-youtube"></a>
-                    </li>
+                    {{-- <li class="social-icon-item">
+                        <a href="{{ asset('https://www.instagram.com/{{ $instagramUsername }}')}}" target="_blank"
+                         class="social-icon-link bi-instagram"> {{ $instagramUsername }} </a>
+                    </li> --}}
 
                     <li class="social-icon-item">
                         <a href="#" class="social-icon-link bi-whatsapp"></a>

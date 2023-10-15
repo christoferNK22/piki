@@ -13,17 +13,17 @@ class InterestSeeder extends Seeder
      */
     public function run(): void
     {
-        $bidangs = [
-            "Bidang Pendidikan Organisasi P3A",
-            "Bidang Politik Hukum dan Ham"
-        ];
+        // $bidangs = [
+        //     "Bidang Pendidikan Organisasi P3A",
+        //     "Bidang Politik Hukum dan Ham"
+        // ];
 
-        foreach ($bidangs as $bidang) {
-            Interest::create([
-                'code' => $this->generateAbbreviation($bidang),
-                'name' => $bidang
-            ]);
-        }
+        // foreach ($bidangs as $bidang) {
+        //     Interest::create([
+        //         'code' => $this->generateAbbreviation($bidang),
+        //         'name' => $bidang
+        //     ]);
+        // }
     }
 
     private function  generateAbbreviation($input)

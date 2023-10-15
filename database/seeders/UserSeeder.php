@@ -15,10 +15,10 @@ class UserSeeder extends Seeder
     public function run(): void
     {
         // User::factory(5)->create();
-        User::create([
-            'name' => 'Super Admin',
-            'username' => 'admin',
-            'password' => bcrypt('admin')
-        ]);
+        // User::create([
+        //     'name' => 'Super Admin',
+        //     'username' => 'admin',
+        //     'password' => bcrypt('admin')
+        // ]);
     }
 }

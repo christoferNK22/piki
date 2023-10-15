@@ -27,10 +27,6 @@
                         <input type="text" class="form-control" required wire:model="contact">
                     </div>
                     <div class="form-group">
-                        <label>Alamat</label>
-                        <input type="text" class="form-control" required wire:model="address">
-                    </div>
-                    <div class="form-group">
                         <label>Jenis Kelamin</label>
                         <select class="form-control" wire:model="gender" required>
                             <option value="" selected disabled>Pilih gender:</option>

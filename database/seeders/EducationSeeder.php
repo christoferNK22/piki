@@ -14,8 +14,8 @@ class EducationSeeder extends Seeder
      */
     public function run(): void
     {
-        for ($i=1; $i <= 3 ; $i++) { 
-            Education::create(['name'=> "Sarjana $i"]);
-        }
+        // for ($i=1; $i <= 3 ; $i++) { 
+        //     Education::create(['name'=> "Sarjana $i"]);
+        // }
     }
 }
