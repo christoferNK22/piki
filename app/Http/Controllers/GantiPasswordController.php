@@ -24,7 +24,7 @@ class GantiPasswordController extends Controller
         }
         $user = Member::find(auth('member')->user()->id);
         if (!Hash::check($request->input('old_password'), $user->password)) return redirect(route('member.dashboard'))->with('error', 'Password Lama Salah');
-        $user->password = bcrypt($request->input('password'));
+        $user->password = $request->input('password');
         $user->save();
         return redirect(route('member.dashboard'))->with('status', 'OK');
     }
