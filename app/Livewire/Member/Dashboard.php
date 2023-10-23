@@ -49,14 +49,10 @@ class Dashboard extends Component
     public function save()
     {
         $imagePath = null;
-        if (!empty($this->image)) {
-            $imagePath = $this->image->store('member');
-        }
 
-        $this->data->update([
+        $data = [
             'name' => $this->name,
             'email' => $this->email,
-            'password' => bcrypt($this->password),
             'bod' => $this->bod,
             'address' => $this->address,
             'contact' => $this->contact,
@@ -65,8 +61,14 @@ class Dashboard extends Component
             'church_id' => $this->churchId,
             'education_id' => $this->educationId,
             'interest_id' => $this->interestId,
-            'image_path' => $imagePath,
-        ]);
+        ];
+
+        if (!empty($this->image)) {
+            $imagePath = $this->image->store('member');
+            $data['image_path'] = $imagePath;
+        }
+
+        $this->data->update($data);
         return redirect(route('member.dashboard'));
     }
 
