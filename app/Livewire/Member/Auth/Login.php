@@ -14,8 +14,11 @@ class Login extends Component
 
     public function auth()
     {
-        if (Member::where('email', $this->email)->get()->count() == 0)
+        if (Member::where('email', $this->email)->get()->count() == 0) {
             return redirect(route('member.login'))->with('error', "Member tdk ada");
+        }
+        if (Member::where('email', $this->email)->first()->is_verified == 0)
+            return redirect(route('member.login'))->with('error', "Member belum di verif");
         if (auth('member')->attempt([
             'email' => $this->email,
             'password' => $this->password

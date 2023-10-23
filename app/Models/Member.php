@@ -40,7 +40,6 @@ class Member extends Authenticatable
         parent::boot();
 
         static::creating(function ($model) {
-            $model->password = bcrypt($model->password);
             $model->is_verified = 0;
         });
     }

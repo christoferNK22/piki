@@ -65,7 +65,7 @@ class Register extends Component
         Member::create([
             'name' => $this->name,
             'email' => $this->email,
-            'password' => $this->password,
+            'password' => bcrypt($this->password),
             'bod' => $this->bod,
             'address' => $this->address,
             'contact' => $this->contact,
