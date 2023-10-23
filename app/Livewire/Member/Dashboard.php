@@ -49,15 +49,14 @@ class Dashboard extends Component
     public function save()
     {
         $imagePath = null;
-
-        $data = [
+        $data  = [
             'name' => $this->name,
             'email' => $this->email,
             'bod' => $this->bod,
             'address' => $this->address,
             'contact' => $this->contact,
             'gender' => $this->gender,
-            'yearIn' => $this->yearIn,
+            'year_in' => $this->yearIn,
             'church_id' => $this->churchId,
             'education_id' => $this->educationId,
             'interest_id' => $this->interestId,
