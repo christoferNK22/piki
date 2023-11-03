@@ -24,22 +24,22 @@
                 <p class="text-white d-flex mb-2">
                     <i class="bi-telephone me-2"></i>
 
-                    <a href="tel: 305-240-9671" class="site-footer-link">
-                        305-240-9671
+                    <a href="tel: {{ $contactInformation->phone_number }}" class="site-footer-link">
+                        {{ $contactInformation->phone_number }}
                     </a>
                 </p>
 
                 <p class="text-white d-flex">
                     <i class="bi-envelope me-2"></i>
 
-                    <a href="mailto:info@yourgmail.com" class="site-footer-link">
-                        email@piki.co.id
+                    <a href="mailto:{{ $contactInformation->email }}" class="site-footer-link">
+                        {{ $contactInformation->email }}
                     </a>
                 </p>
 
                 <p class="text-white d-flex mt-3">
                     <i class="bi-geo-alt me-2"></i>
-                    Sleman, Yogyakarta
+                    {{ $contactInformation->address }}
                 </p>
 
                 <a href="#" class="custom-btn btn mt-3">Maps</a>
@@ -57,25 +57,33 @@
 
                 <div class="col-lg-6 col-md-5 col-12 d-flex justify-content-center align-items-center mx-auto">
                     <ul class="social-icon">
-                        <li class="social-icon-item">
-                            <a href="#" class="social-icon-link bi-twitter"></a>
-                        </li>
+                        @if ($contactInformation->twitter_url != '')
+                            <li class="social-icon-item">
+                                <a href="{{ $contactInformation->twitter_url }}"
+                                    class="social-icon-link bi-twitter"></a>
+                            </li>
+                        @endif
 
-                        <li class="social-icon-item">
-                            <a href="#" class="social-icon-link bi-facebook"></a>
-                        </li>
+                        @if ($contactInformation->facebook_url != '')
+                            <li class="social-icon-item">
+                                <a href="{{ $contactInformation->facebook_url }}"
+                                    class="social-icon-link bi-facebook"></a>
+                            </li>
+                        @endif
 
-                        <li class="social-icon-item">
-                            <a href="#" class="social-icon-link bi-instagram"></a>
-                        </li>
+                        @if ($contactInformation->instagram_url != '')
+                            <li class="social-icon-item">
+                                <a href="{{ $contactInformation->instagram_url }}"
+                                    class="social-icon-link bi-instagram"></a>
+                            </li>
+                        @endif
 
-                        <li class="social-icon-item">
-                            <a href="#" class="social-icon-link bi-linkedin"></a>
-                        </li>
-
-                        <li class="social-icon-item">
-                            <a href="{{ asset('https://youtube.com/templatemo') }}" class="social-icon-link bi-youtube"></a>
-                        </li>
+                        @if ($contactInformation->youtube_url != '')
+                            <li class="social-icon-item">
+                                <a href="{{ $contactInformation->youtube_url }}"
+                                    class="social-icon-link bi-youtube"></a>
+                            </li>
+                        @endif
                     </ul>
                 </div>
 

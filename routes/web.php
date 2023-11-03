@@ -8,6 +8,7 @@ use App\Livewire\Admin\Church\ChurchCreate;
 use App\Livewire\Admin\Church\ChurchEdit;
 use App\Livewire\Admin\Dashboard;
 use App\Livewire\Member\Dashboard as MemberDashboard;
+use App\Livewire\Landing\Dashboard as LandingDashboard;
 use App\Livewire\Admin\Education\EducationIndex;
 use App\Livewire\Admin\Education\EducationCreate;
 use App\Livewire\Admin\Education\EducationEdit;
@@ -33,9 +34,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::get('/', function () {
-    return view('livewire.landing.beranda');
-})->name('home');
+Route::get('/', LandingDashboard::class)->name('home');
 
 Route::name('landing.')->group(function () {
     Route::prefix('beranda')->name('beranda.')->group(function () {
