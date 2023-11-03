@@ -24,7 +24,7 @@
                     <a class="nav-link" href="{{ route('master.member.index') }}"><i class="fas fa-users"></i>
                         <span>Member</span></a>
                 </li>
-                <li class="dropdown">
+                <li class="dropdown active">
                     <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i> <span>Master Data</span></a>
                     <ul class="dropdown-menu">
                         <li><a class="nav-link" href="{{ route('master.church.index') }}"><i class="fas fa-church"></i>
