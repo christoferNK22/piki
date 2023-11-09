@@ -15,7 +15,11 @@ class InterestSeeder extends Seeder
     {
         $bidangs = [
             "Bidang Pendidikan Organisasi P3A",
-            "Bidang Politik Hukum dan Ham"
+            "Bidang Politik Hukum dan Ham",
+            "Bidang Kerjasama antar Lembaga",
+            "Bidang Ekonomi Pengembangan Masyarakat dan Lingkungan",
+            "Bidang OIKUMENE dan Lintas Iman",
+            "Bidang Informasi dan Komunikasi"
         ];
 
         foreach ($bidangs as $bidang) {
