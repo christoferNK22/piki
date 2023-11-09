@@ -25,14 +25,34 @@
                         <span>Member</span></a>
                 </li>
                 <li class="dropdown active">
-                    <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i> <span>Master Data</span></a>
+                    <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i
+                            class="fas fa-columns"></i> <span>Master Data</span></a>
                     <ul class="dropdown-menu">
                         <li><a class="nav-link" href="{{ route('master.church.index') }}"><i class="fas fa-church"></i>
-                            <span>Gereja</span></a></li>
-                        <li><a class="nav-link" href="{{ route('master.interest.index') }}"><i class="fas fa-briefcase"></i>
-                            <span>Bidang Minat</span></a></li>
-                        <li><a class="nav-link" href="{{ route('master.education.index') }}"><i class="fas fa-school"></i>
-                            <span>Edukasi</span></a></li>
+                                <span>Gereja</span></a></li>
+                        <li><a class="nav-link" href="{{ route('master.interest.index') }}"><i
+                                    class="fas fa-briefcase"></i>
+                                <span>Bidang Minat</span></a></li>
+                        <li><a class="nav-link" href="{{ route('master.education.index') }}"><i
+                                    class="fas fa-school"></i>
+                                <span>Edukasi</span></a></li>
+                    </ul>
+                </li>
+                <li class="dropdown active">
+                    <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i
+                            class="fas fa-list"></i> <span>CMS</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a class="nav-link" href=""><i class="fas fa-phone-volume"></i>
+                                <span>Informasi Kontak</span></a></li>
+                        <li><a class="nav-link" href=""><i
+                                    class="fas fa-file"></i>
+                                <span>Profil</span></a></li>
+                        <li><a class="nav-link" href=""><i
+                                    class="fas fa-newspaper"></i>
+                                <span>Berita</span></a></li>
+                        <li><a class="nav-link" href=""><i
+                                    class="fas fa-calendar"></i>
+                                <span>Agenda Kegiatan</span></a></li>
                     </ul>
                 </li>
             @endif

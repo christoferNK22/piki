@@ -8,10 +8,6 @@
                 <ul class="footer-menu">
                     <li class="footer-menu-item"><a href="#" class="footer-menu-link">Berita Terbaru</a></li>
 
-                    <li class="footer-menu-item"><a href="#" class="footer-menu-link">Foto</a></li>
-
-                    <li class="footer-menu-item"><a href="#" class="footer-menu-link">Video</a></li>
-
                     <li class="footer-menu-item"><a href="#" class="footer-menu-link">Kontak</a></li>
 
                     <li class="footer-menu-item"><a href="#" class="footer-menu-link">Gabung Member</a></li>
