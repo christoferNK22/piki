@@ -25,17 +25,8 @@
                     <a class="nav-link click-scroll" href="#section_2">Profil</a>
                 </li>
 
-                <li class="nav-item dropdown">
-                    <a class="nav-link click-scroll dropdown-toggle" href="#section_3" id="navbarLightDropdownMenuLink"
-                        role="button" data-bs-toggle="dropdown" aria-expanded="false">Berita</a>
-
-                    <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
-                        <li><a class="dropdown-item" href="news.html">Berita Baru</a></li>
-
-                        <li><a class="dropdown-item" href="news-photo.html">Berita Foto</a></li>
-
-                        <li><a class="dropdown-item" href="">Berita Video</a></li>
-                    </ul>
+                <li class="nav-item">
+                    <a class="nav-link click-scroll" href="#section_3">Berita</a>
                 </li>
 
                 <li class="nav-item">
