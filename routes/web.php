@@ -6,6 +6,11 @@ use App\Livewire\Member\Auth\Register;
 use App\Livewire\Admin\Church\ChurchIndex;
 use App\Livewire\Admin\Church\ChurchCreate;
 use App\Livewire\Admin\Church\ChurchEdit;
+use App\Livewire\Admin\CMS\Agenda as AgendaIndex;
+use App\Livewire\Admin\CMS\ContactInformation as ContactInformationIndex;
+use App\Livewire\Admin\CMS\Management as ManagementIndex;
+use App\Livewire\Admin\CMS\News as NewsIndex;
+use App\Livewire\Admin\CMS\Profile as ProfileIndex;
 use App\Livewire\Admin\Dashboard;
 use App\Livewire\Member\Dashboard as MemberDashboard;
 use App\Livewire\Landing\Dashboard as LandingDashboard;
@@ -19,7 +24,6 @@ use App\Livewire\Admin\Member\MemberIndex;
 use App\Livewire\Admin\Member\MemberCreate;
 use App\Livewire\Admin\Member\MemberEdit;
 use App\Livewire\Member\Auth\Login as AuthLogin;
-use App\Models\Member;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -72,6 +76,23 @@ Route::prefix('admin/')->group(function () {
                 Route::get('', MemberIndex::class)->name('index');
                 Route::get('create', MemberCreate::class)->name('create');
                 Route::get('edit/{id}', MemberEdit::class)->name('edit');
+            });
+        });
+        Route::name('cms.')->group(function () {
+            Route::prefix('contact-information')->name('contact_information.')->group(function () {
+                Route::get('', ContactInformationIndex::class)->name('index');
+            });
+            Route::prefix('profile')->name('profile.')->group(function () {
+                Route::get('', ProfileIndex::class)->name('index');
+            });
+            Route::prefix('berita')->name('berita.')->group(function () {
+                Route::get('', NewsIndex::class)->name('index');
+            });
+            Route::prefix('agenda')->name('agenda.')->group(function () {
+                Route::get('', AgendaIndex::class)->name('index');
+            });
+            Route::prefix('management')->name('management.')->group(function () {
+                Route::get('', ManagementIndex::class)->name('index');
             });
         });
     });
