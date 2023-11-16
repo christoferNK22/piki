@@ -79,7 +79,7 @@ Route::prefix('admin/')->group(function () {
             });
         });
         Route::name('cms.')->group(function () {
-            Route::prefix('contact-information')->name('contact_information.')->group(function () {
+            Route::prefix('contact_information')->name('contact_information.')->group(function () {
                 Route::get('', ContactInformationIndex::class)->name('index');
             });
             Route::prefix('profile')->name('profile.')->group(function () {
@@ -91,7 +91,7 @@ Route::prefix('admin/')->group(function () {
             Route::prefix('agenda')->name('agenda.')->group(function () {
                 Route::get('', AgendaIndex::class)->name('index');
             });
-            Route::prefix('management')->name('management.')->group(function () {
+            Route::prefix('penguru')->name('pengurus.')->group(function () {
                 Route::get('', ManagementIndex::class)->name('index');
             });
         });
