@@ -11,6 +11,7 @@ use App\Livewire\Admin\CMS\ContactInformation as ContactInformationIndex;
 use App\Livewire\Admin\CMS\Management as ManagementIndex;
 use App\Livewire\Admin\CMS\News as NewsIndex;
 use App\Livewire\Admin\CMS\Profile as ProfileIndex;
+use App\Livewire\Admin\CMS\VisiMisi as VisiMisiIndex;
 use App\Livewire\Admin\Dashboard;
 use App\Livewire\Member\Dashboard as MemberDashboard;
 use App\Livewire\Landing\Dashboard as LandingDashboard;
@@ -91,8 +92,11 @@ Route::prefix('admin/')->group(function () {
             Route::prefix('agenda')->name('agenda.')->group(function () {
                 Route::get('', AgendaIndex::class)->name('index');
             });
-            Route::prefix('penguru')->name('pengurus.')->group(function () {
+            Route::prefix('pengurus')->name('pengurus.')->group(function () {
                 Route::get('', ManagementIndex::class)->name('index');
+            });
+            Route::prefix('visi_misi')->name('visi_misi.')->group(function () {
+                Route::get('', VisiMisiIndex::class)->name('index');
             });
         });
     });

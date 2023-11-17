@@ -47,6 +47,9 @@
                         <li><a class="nav-link" href="{{ route('cms.profile.index')}}"><i
                                     class="fas fa-file"></i>
                                 <span>Profil</span></a></li>
+                        <li><a class="nav-link" href="{{ route('cms.visi_misi.index')}}"><i
+                                    class="fas fa-book-reader"></i>
+                                <span>Visi Misi</span></a></li>
                         <li><a class="nav-link" href="{{ route('cms.berita.index')}}"><i
                                     class="fas fa-newspaper"></i>
                                 <span>Berita</span></a></li>

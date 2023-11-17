@@ -14,10 +14,6 @@
                     <textarea class="form-control" wire:model="foundation"></textarea>
                 </div>
                 <div class="form-group">
-                    <label>Visi Misi</label>
-                    <textarea class="form-control" wire:model="visi_misi"></textarea>
-                </div>
-                <div class="form-group">
                     <button class="btn btn-primary">Simpan</button>
                 </div>
             </form>
