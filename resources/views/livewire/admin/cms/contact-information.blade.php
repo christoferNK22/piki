@@ -2,7 +2,7 @@
     <div class="col-12 col-md-12 col-lg-12">
         <div class="card">
             <div class="card-header">
-                <h4>Input Text</h4>
+                <h4>Input Informasi Kontak</h4>
             </div>
             <form class="card-body" wire:submit="save">
                 <div class="form-group">

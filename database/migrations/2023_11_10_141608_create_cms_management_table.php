@@ -13,11 +13,11 @@ return new class extends Migration
     {
         Schema::create('cms_management', function (Blueprint $table) {
             $table->id();
+            $table->string('name')->default('');
             $table->enum('dewan', ['penasihat', 'pakar', 'pengurus']);
             $table->enum('position', 
                         ['ketua', 'wakil_ketua', 'sekertaris', 'wakil_sekertaris', 
                         'bendahara', 'wakil_bendahara', 'anggota']);
-            $table->string('name')->default('');
             $table->string('origin')->default('');
             $table->string('image')->default('');
             $table->timestamps();
