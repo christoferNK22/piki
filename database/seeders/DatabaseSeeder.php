@@ -6,6 +6,11 @@ namespace Database\Seeders;
 
 use App\Models\Member;
 use Database\Seeders\CMS\CmsContactInformationSeeder;
+use Database\Seeders\CMS\CmsAgendaSeeder;
+use Database\Seeders\CMS\CmsManagementSeeder;
+use Database\Seeders\CMS\CmsNewsSeeder;
+use Database\Seeders\CMS\CmsProfileSeeder;
+use Database\Seeders\CMS\CmsVisiMisiSeeder;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -22,7 +27,12 @@ class DatabaseSeeder extends Seeder
                 InterestSeeder::class,
                 ChurchSeeder::class,
                 MemberSeeder::class,
-                CmsContactInformationSeeder::class
+                CmsAgendaSeeder::class,
+                CmsContactInformationSeeder::class,
+                CmsVisiMisiSeeder::class,
+                CmsManagementSeeder::class,
+                CmsNewsSeeder::class,
+                CmsProfileSeeder::class
             ]
         );
     }
