@@ -13,12 +13,12 @@ return new class extends Migration
     {
         Schema::create('cms_agenda', function (Blueprint $table) {
             $table->id();
-            $table->string('activity')->default('');
-            $table->date('date');
-            $table->date('start_date');
-            $table->date('finish_date');
-            $table->string('title')->default('');
-            $table->text('note')->default('');
+            $table->string('activity')->notnulldefault('');
+            $table->date('date')->notnull();
+            $table->date('start_date')->notnull();
+            $table->date('finish_date')->notnull();
+            $table->string('title')->notnulldefault('');
+            $table->text('note')->notnulldefault('');
             $table->timestamps();
         });
     }

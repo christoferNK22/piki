@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('cms_news', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->text('content')->default('');
-            $table->string('image_news')->default('');
+            $table->string('title')->notnulldefault('');
+            $table->text('content')->notnulldefault('');
+            $table->string('image_news')->notnulldefault('');
             $table->timestamps();
         });
     }

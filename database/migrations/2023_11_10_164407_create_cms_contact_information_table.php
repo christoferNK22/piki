@@ -13,15 +13,15 @@ return new class extends Migration
     {
         Schema::create('cms_contact_information', function (Blueprint $table) {
             $table->id();
-            $table->string('phone_number')->default('');
-            $table->string('email')->default('');
-            $table->string('address')->default('');
-            $table->string('map_url')->default('');
-            $table->string('whatsapp_url')->default('');
-            $table->string('facebook_url')->default('');
-            $table->string('instagram_url')->default('');
-            $table->string('twitter_url')->default('');
-            $table->string('youtube_url')->default('');
+            $table->string('phone_number')->notnulldefault('');
+            $table->string('email')->notnulldefault('');
+            $table->string('address')->notnulldefault('');
+            $table->string('map_url')->notnulldefault('');
+            $table->string('whatsapp_url')->notnulldefault('');
+            $table->string('facebook_url')->notnulldefault('');
+            $table->string('instagram_url')->notnulldefault('');
+            $table->string('twitter_url')->notnulldefault('');
+            $table->string('youtube_url')->notnulldefault('');
             $table->timestamps();
         });
     }

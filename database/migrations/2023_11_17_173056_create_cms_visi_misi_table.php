@@ -13,11 +13,11 @@ return new class extends Migration
     {
         Schema::create('cms_visi_misi', function (Blueprint $table) {
             $table->id();
-            $table->text('visi1')->default('');
-            $table->text('visi2')->default('');
-            $table->text('visi3')->default('');
-            $table->text('visi4')->default('');
-            $table->text('visi5')->default('');
+            $table->text('visi1')->notnulldefault('');
+            $table->text('visi2')->notnulldefault('');
+            $table->text('visi3')->notnulldefault('');
+            $table->text('visi4')->notnulldefault('');
+            $table->text('visi5')->notnulldefault('');
             $table->timestamps();
         });
     }

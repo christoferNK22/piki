@@ -13,9 +13,8 @@ return new class extends Migration
     {
         Schema::create('cms_profile', function (Blueprint $table) {
             $table->id();
-            $table->text('sejarah')->default('');
-            $table->text('foundation')->default('');
-            $table->text('visi_misi')->default('');
+            $table->text('sejarah')->notnulldefault('');
+            $table->text('foundation')->notnulldefault('');
             $table->timestamps();
         });
     }
