@@ -37,12 +37,12 @@
                 </div>
                 <div class="form-group">
                     <label>Foto Pengurus</label>
-                    <input type="file" class="form-control" wire:model="image" accept="image/*" >
-                        @if (isset($currentImage) && !is_null($currentImage))
-                            <figure class="avatar mr-2 avatar-xl">
-                                <img src="{{ asset("storage/{$currentImage}") }}" alt="{{ $name }}">
-                            </figure>
-                        @endif
+                    <input type="file" class="form-control" wire:model="images" accept="image/*">
+                    @if (isset($currentImage) && !is_null($currentImage))
+                        <figure class="avatar mr-2 avatar-xl">
+                            <img src="{{ asset("storage/{$currentImage}") }}" alt="{{ $name }}">
+                        </figure>
+                    @endif
                 </div>
                 <div class="form-group">
                     <button class="btn btn-primary">Simpan</button>

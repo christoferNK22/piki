@@ -14,6 +14,7 @@ class ManagementCreate extends Component
     public string $dewan = "";
     public string $position = "";
     public string $origin = "";
+
     public $images;
 
     public function save()
