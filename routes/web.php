@@ -6,10 +6,7 @@ use App\Livewire\Member\Auth\Register;
 use App\Livewire\Admin\Church\ChurchIndex;
 use App\Livewire\Admin\Church\ChurchCreate;
 use App\Livewire\Admin\Church\ChurchEdit;
-use App\Livewire\Admin\CMS\Agenda as AgendaIndex;
 use App\Livewire\Admin\CMS\ContactInformation as ContactInformationIndex;
-use App\Livewire\Admin\CMS\Management as ManagementIndex;
-use App\Livewire\Admin\CMS\News as NewsIndex;
 use App\Livewire\Admin\CMS\Profile as ProfileIndex;
 use App\Livewire\Admin\CMS\VisiMisi as VisiMisiIndex;
 use App\Livewire\Admin\Dashboard;
@@ -21,9 +18,16 @@ use App\Livewire\Admin\Education\EducationEdit;
 use App\Livewire\Admin\Interest\InterestIndex;
 use App\Livewire\Admin\Interest\InterestCreate;
 use App\Livewire\Admin\Interest\InterestEdit;
+use App\Livewire\Admin\CMS\Management\ManagementIndex;
+use App\Livewire\Admin\CMS\Management\ManagementCreate;
+use App\Livewire\Admin\CMS\Management\ManagementEdit;
 use App\Livewire\Admin\Member\MemberIndex;
 use App\Livewire\Admin\Member\MemberCreate;
 use App\Livewire\Admin\Member\MemberEdit;
+use App\Livewire\Admin\CMS\Agenda\AgendaIndex;
+use App\Livewire\Admin\CMS\News\NewsIndex;
+use App\Livewire\Admin\CMS\News\NewsCreate;
+use App\Livewire\Admin\CMS\News\NewsEdit;
 use App\Livewire\Member\Auth\Login as AuthLogin;
 use Illuminate\Support\Facades\Route;
 
@@ -88,12 +92,16 @@ Route::prefix('admin/')->group(function () {
             });
             Route::prefix('berita')->name('berita.')->group(function () {
                 Route::get('', NewsIndex::class)->name('index');
+                Route::get('create', NewsCreate::class)->name('create');
+                Route::get('edit/{id}', NewsEdit::class)->name('edit');
             });
             Route::prefix('agenda')->name('agenda.')->group(function () {
                 Route::get('', AgendaIndex::class)->name('index');
             });
             Route::prefix('pengurus')->name('pengurus.')->group(function () {
                 Route::get('', ManagementIndex::class)->name('index');
+                Route::get('create', ManagementCreate::class)->name('create');
+                Route::get('edit/{id}', ManagementEdit::class)->name('edit');
             });
             Route::prefix('visi_misi')->name('visi_misi.')->group(function () {
                 Route::get('', VisiMisiIndex::class)->name('index');

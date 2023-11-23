@@ -1,12 +1,13 @@
 <?php
 
-namespace App\Livewire\Admin\CMS;
+namespace App\Livewire\Admin\CMS\Agenda;
 
 use App\Models\CMS\CmsAgenda;
 use Livewire\Component;
 
-class Agenda extends Component
+class AgendaIndex extends Component
 {
+    public $data;
     public string $activity = "";
     public string $date = "";
     public string $startDate = "";
