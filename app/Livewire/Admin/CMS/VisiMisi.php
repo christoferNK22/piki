@@ -18,6 +18,11 @@ class VisiMisi extends Component
         return view('livewire.admin.cms.visi-misi');
     }
 
+    public function updated()
+    {
+        $this->dispatch('summernote-reinit');
+    }
+
     public function mount()
     {
         $visiMisi = CmsVisiMisi::first();
@@ -32,7 +37,7 @@ class VisiMisi extends Component
 
     public function save()
     {
-        $model = new CmsVisiMisi();
+        $model = CmsVisiMisi::first() ?? new CmsVisiMisi();
         $model->visi1 = $this->visi1;
         $model->visi2 = $this->visi2;
         $model->visi3 = $this->visi3;
@@ -40,6 +45,6 @@ class VisiMisi extends Component
         $model->visi5 = $this->visi5;
         $model->save();
 
-        return redirect(route('cms.visi-misi.index'));
+        return redirect(route('cms.visi_misi.index'));
     }
 }

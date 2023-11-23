@@ -8,6 +8,7 @@ use Livewire\Component;
 class AgendaIndex extends Component
 {
     public $data;
+
     public string $activity = "";
     public string $date = "";
     public string $startDate = "";
@@ -17,7 +18,7 @@ class AgendaIndex extends Component
 
     public function render()
     {
-        return view('livewire.admin.cms.agenda');
+        return view('livewire.admin.cms.agenda.agenda-index');
     }
 
     public function save()
