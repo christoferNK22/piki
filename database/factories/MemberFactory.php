@@ -29,7 +29,7 @@ class MemberFactory extends Factory
             'name' => $this->faker->name,
             'email' => $this->faker->unique()->safeEmail,
             'bod' => $this->faker->date,
-            'password' => 'password',
+            'password' => bcrypt('password'),
             'contact' => $this->faker->phoneNumber,
             'address' => $this->faker->address,
             'gender' => $this->faker->randomElement(['male', 'female']),

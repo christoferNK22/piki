@@ -37,7 +37,7 @@
                 </div>
                 <div class="form-group">
                     <label>Foto Pengurus</label>
-                    <input type="file" class="form-control" wire:model="image" accept="image/*" >
+                    <input type="file" class="form-control" wire:model="images" accept="image/*" >
                         @if (isset($currentImagePath) && !is_null($currentImagePath))
                             <figure class="avatar mr-2 avatar-xl">
                                 <img src="{{ asset("storage/{$currentImagePath}") }}" alt="{{ $name }}">
