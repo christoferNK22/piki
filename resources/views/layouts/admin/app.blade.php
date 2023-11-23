@@ -23,6 +23,7 @@
                     </div>
 
                     <div class="section-body">
+                        @include('layouts.admin.partials.scripts')
                         @yield('content')
                         {{ $slot }}
                     </div>
@@ -73,8 +74,7 @@
             @include('layouts.admin.partials.footer')
         </div>
     </div>
-
-    @include('layouts.admin.partials.scripts')
+    <script src="{{ asset('js/page/modules-datatables.js') }}"></script>
 </body>
 
 </html>

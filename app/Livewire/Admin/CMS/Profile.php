@@ -7,8 +7,8 @@ use Livewire\Component;
 
 class Profile extends Component
 {
-    public string $sejarah= "";
-    public string $foundation= "";
+    public string $sejarah = "";
+    public string $foundation = "";
 
     public function render()
     {
@@ -17,11 +17,16 @@ class Profile extends Component
 
     public function mount()
     {
-        $profile= CmsProfile::first();
+        $profile = CmsProfile::first();
         if (!empty($profile)) {
             $this->sejarah = $profile->sejarah ?? "";
             $this->foundation = $profile->foundation ?? "";
         }
+    }
+
+    public function updated()
+    {
+        $this->dispatch('summernote-reinit');
     }
 
     public function save()
@@ -34,3 +39,4 @@ class Profile extends Component
         return redirect(route('cms.profile.index'));
     }
 }
+
