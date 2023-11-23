@@ -28,17 +28,16 @@ class NewsEdit extends Component
     {
         $imageNews = null;
 
-        $this->data->update([
-            'title' => $this->title,
-            'content' => $this->content
-        ]);
-
-        if (!empty($this->image)) {
-            $imageNews = $this->image->store('news');
-            $data['image_news'] = $imageNews;
+        if (!empty($this->images)) {
+            $imageNews = $this->images->store('news');
         }
 
-        $this->data->update($data);
+        $this->data->update([
+            'title' => $this->title,
+            'content' => $this->content,
+            'image_news' => $imageNews ?? ''
+        ]);
+
         return redirect(route('cms.berita.index'));
     }
 
