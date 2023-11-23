@@ -15,10 +15,10 @@
                 </div>
                 <div class="form-group">
                     <label>Gambar</label>
-                    <input type="file" class="form-control" wire:model="image_news" accept="image_news/*" >
-                        @if (isset($currentImagePath) && !is_null($currentImagePath))
+                    <input type="file" class="form-control" wire:model="image_news" accept="image/*" >
+                        @if (isset($currentImageNews) && !is_null($currentImageNews))
                             <figure class="avatar mr-2 avatar-xl">
-                                <img src="{{ asset("storage/{$currentImagePath}") }}" alt="{{ $name }}">
+                                <img src="{{ asset("storage/{$currentImageNews}") }}" alt="{{ $name }}">
                             </figure>
                         @endif
                 </div>

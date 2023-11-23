@@ -39,6 +39,12 @@
                                     <td class="align-middle">
                                         {{ $data->origin }}
                                     </td>
+                                    <td class="align-middle">
+                                        <figure class="avatar mr-2 avatar-xl">
+                                            <img src="{{ asset(!empty($data->image) ? "storage/{$data->image}" : 'img/avatar/avatar-1.png') }}"
+                                                alt="{{ $data->name }}">
+                                        </figure>
+                                    </td>
                                     <td>
                                         <a href="{{ route('cms.pengurus.edit', ['id' => $data->id]) }}"
                                             class="btn btn-secondary">Edit</a>

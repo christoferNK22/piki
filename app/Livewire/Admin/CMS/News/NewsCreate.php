@@ -4,18 +4,27 @@ namespace App\Livewire\Admin\CMS\News;
 
 use App\Models\CMS\CmsNews;
 use Livewire\Component;
+use Livewire\WithFileUploads;
 
 class NewsCreate extends Component
 {
+    use WithFileUploads;
+
     public string $title = "";
     public string $content = "";
-    public string $imageNews = "";
+    public $images;
 
     public function save()
     {
+        $imageNews = null;
+        if (!empty($this->images)) {
+            $imageNews = $this->images->store('news');
+        }
+
         CmsNews::create([
             'title' => $this->title,
-            'content' => $this->content
+            'content' => $this->content,
+            'image_news' => $imageNews,
         ]);
         return redirect(route('cms.berita.index'));
     }

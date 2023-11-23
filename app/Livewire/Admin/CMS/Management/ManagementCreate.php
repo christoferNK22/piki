@@ -28,7 +28,7 @@ class ManagementCreate extends Component
             'dewan' => $this->dewan,
             'position' => $this->position,
             'origin' => $this->origin,
-            'image' => $image ?? ''
+            'image' => $image
         ]);
         return redirect(route('cms.pengurus.index'));
     }
