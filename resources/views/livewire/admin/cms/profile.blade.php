@@ -7,7 +7,7 @@
             <form class="card-body" wire:submit="save">
                 <div class="form-group">
                     <label>Sejarah</label>
-                    <textarea class="form-control" wire:model="sejarah"></textarea>
+                    <textarea row="4" cols="50" class="form-control" wire:model="sejarah"></textarea>
                 </div>
                 <div class="form-group">
                     <label>Pondasi</label>

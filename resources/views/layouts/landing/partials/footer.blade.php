@@ -6,7 +6,7 @@
                 <h5 class="site-footer-title mb-3">Quick Links</h5>
 
                 <ul class="footer-menu">
-                    <li class="footer-menu-item"><a href="#" class="footer-menu-link">Berita Terbaru</a></li>
+                    <li class="footer-menu-item"><a href="# " class="footer-menu-link">Berita Terbaru</a></li>
 
                     <li class="footer-menu-item"><a href="#" class="footer-menu-link">Kontak</a></li>
 

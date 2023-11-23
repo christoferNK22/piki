@@ -9,19 +9,26 @@ class Profile extends Component
 {
     public string $sejarah= "";
     public string $foundation= "";
-    public string $visiMisi= "";
 
     public function render()
     {
         return view('livewire.admin.cms.profile');
     }
 
+    public function mount()
+    {
+        $profile= CmsProfile::first();
+        if (!empty($profile)) {
+            $this->sejarah = $profile->sejarah ?? "";
+            $this->foundation = $profile->foundation ?? "";
+        }
+    }
+
     public function save()
     {
-        $model = new CmsProfile();
+        $model = CmsProfile::first() ?? (new CmsProfile());
         $model->sejarah = $this->sejarah;
         $model->foundation = $this->foundation;
-        $model->visi_misi = $this->visiMisi;
         $model->save();
 
         return redirect(route('cms.profile.index'));
