@@ -11,8 +11,8 @@ class NewsEdit extends Component
     use WithFileUploads;
 
     public $data;
-    public string $title= "";
-    public string $content= "";
+    public string $title = "";
+    public string $content = "";
     public $images;
     public $currentImageNews;
 
@@ -44,6 +44,6 @@ class NewsEdit extends Component
 
     public function render()
     {
-        return view('livewire.admin.cms.news.news-form')->title("Edit Berita {$this->data->name}");
+        return view('livewire.admin.cms.news.news-form')->title("Edit Berita {$this->data->title}");
     }
 }
