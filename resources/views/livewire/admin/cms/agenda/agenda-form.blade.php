@@ -10,16 +10,12 @@
                     <input type="text" class="form-control" wire:model="activity">
                 </div>
                 <div class="form-group">
-                    <label>Tanggal Kegiatan</label>
-                    <input type="date" class="form-control" wire:model="date">
-                </div>
-                <div class="form-group">
                     <label>Hari & Tanggal Mulai</label>
-                    <input type="date" class="form-control" wire:model="start_date">
+                    <input type="date" class="form-control" wire:model="startDate">
                 </div>
                 <div class="form-group">
                     <label>Hari & Tanggal Selesai</label>
-                    <input type="date" class="form-control" wire:model="finish_date">
+                    <input type="date" class="form-control" wire:model="finishDate">
                 </div>
                 <div class="form-group">
                     <label>Tema Kegiatan</label>

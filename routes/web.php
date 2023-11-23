@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\GantiPasswordController;
 use App\Livewire\Admin\Auth\Login;
+use App\Livewire\Admin\CMS\Agenda\AgendaForm;
 use App\Livewire\Member\Auth\Register;
 use App\Livewire\Admin\Church\ChurchIndex;
 use App\Livewire\Admin\Church\ChurchCreate;
@@ -97,6 +98,7 @@ Route::prefix('admin/')->group(function () {
             });
             Route::prefix('agenda')->name('agenda.')->group(function () {
                 Route::get('', AgendaIndex::class)->name('index');
+                Route::get('/form/{agendaId?}', AgendaForm::class)->name('form');
             });
             Route::prefix('pengurus')->name('pengurus.')->group(function () {
                 Route::get('', ManagementIndex::class)->name('index');

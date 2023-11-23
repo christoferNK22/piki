@@ -2,8 +2,9 @@
     <div class="col-12">
         <div class="card">
             <div class="card-header d-flex justify-content-between">
-                <h4>Data Aktifitas</h4>
-                <a href="" class="btn btn-icon icon-left btn-primary"><i class="far fa-edit"></i> Tambah</a>
+                <h4>Data Agenda</h4>
+                <a href="{{ route('cms.agenda.form') }}" class="btn btn-icon icon-left btn-primary"><i
+                        class="far fa-edit"></i> Tambah</a>
             </div>
             <div class="card-body">
                 <div class="table-responsive">
@@ -41,7 +42,7 @@
                                         {{ $data->note }}
                                     </td>
                                     <td>
-                                        <a href="{{ route('master.church.edit', ['id' => $data->id]) }}"
+                                        <a href="{{ route('cms.agenda.form', ['agendaId' => $data->id]) }}"
                                             class="btn btn-secondary">Edit</a>
                                         <button wire:click="delete({{ $data->id }})"
                                             class="btn btn-danger">Delete</button>

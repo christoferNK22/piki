@@ -8,14 +8,6 @@ use Livewire\Component;
 class AgendaIndex extends Component
 {
     public $datas;
-
-    public string $activity = "";
-    public string $date = "";
-    public string $startDate = "";
-    public string $finishDate = "";
-    public string $title = "";
-    public string $note = "";
-
     public function render()
     {
         return view('livewire.admin.cms.agenda.agenda-index');
@@ -26,17 +18,9 @@ class AgendaIndex extends Component
         $this->datas = CmsAgenda::all();
     }
 
-    public function save()
+    public function delete($id)
     {
-        $model = new CmsAgenda();
-        $model->activity = $this->activity;
-        $model->date = $this->date;
-        $model->start_date = $this->startDate;
-        $model->finish_date = $this->finishDate;
-        $model->title = $this->title;
-        $model->note = $this->note;
-        $model->save();
-
-        return redirect(route('cms.agenda.index'));
+        CmsAgenda::findOrFail($id)->delete();
+        return redirect(route('cms.agenda.index'))->with('status', 'Berhasil Hapus Agenda');
     }
 }
