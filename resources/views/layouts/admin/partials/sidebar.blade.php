@@ -24,7 +24,7 @@
                     <a class="nav-link" href="{{ route('master.member.index') }}"><i class="fas fa-users"></i>
                         <span>Member</span></a>
                 </li>
-                <li class="dropdown active">
+                <li class="dropdown ">
                     <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i
                             class="fas fa-columns"></i> <span>Master Data</span></a>
                     <ul class="dropdown-menu">
@@ -38,25 +38,23 @@
                                 <span>Edukasi</span></a></li>
                     </ul>
                 </li>
-                <li class="dropdown active">
-                    <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i
-                            class="fas fa-list"></i> <span>CMS</span></a>
+                <li class="dropdown ">
+                    <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-list"></i>
+                        <span>CMS</span></a>
                     <ul class="dropdown-menu">
-                        <li><a class="nav-link" href="{{ route('cms.contact_information.index')}}"><i class="fas fa-phone-volume"></i>
+                        <li><a class="nav-link" href="{{ route('cms.contact_information.index') }}"><i
+                                    class="fas fa-phone-volume"></i>
                                 <span>Informasi Kontak</span></a></li>
-                        <li><a class="nav-link" href="{{ route('cms.profile.index')}}"><i
-                                    class="fas fa-file"></i>
+                        <li><a class="nav-link" href="{{ route('cms.profile.index') }}"><i class="fas fa-file"></i>
                                 <span>Profil</span></a></li>
-                        <li><a class="nav-link" href="{{ route('cms.visi_misi.index')}}"><i
+                        <li><a class="nav-link" href="{{ route('cms.visi_misi.index') }}"><i
                                     class="fas fa-book-reader"></i>
                                 <span>Visi Misi</span></a></li>
-                        <li><a class="nav-link" href="{{ route('cms.berita.index')}}"><i
-                                    class="fas fa-newspaper"></i>
+                        <li><a class="nav-link" href="{{ route('cms.berita.index') }}"><i class="fas fa-newspaper"></i>
                                 <span>Berita</span></a></li>
-                        <li><a class="nav-link" href="{{ route('cms.agenda.index')}}"><i
-                                    class="fas fa-calendar"></i>
+                        <li><a class="nav-link" href="{{ route('cms.agenda.index') }}"><i class="fas fa-calendar"></i>
                                 <span>Agenda Kegiatan</span></a></li>
-                        <li><a class="nav-link" href="{{ route('cms.pengurus.index')}}"><i
+                        <li><a class="nav-link" href="{{ route('cms.pengurus.index') }}"><i
                                     class="fas fa-user-friends"></i>
                                 <span>Pengurus</span></a></li>
                     </ul>
