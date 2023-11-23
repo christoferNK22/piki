@@ -11,7 +11,7 @@
                 </div>
                 <div class="form-group">
                     <label>Deskripsi</label>
-                    <textarea class="form-control" wire:model="content"></textarea>
+                    <textarea class="summernote" data-model="content">{!! $content !!}</textarea>
                 </div>
                 <div class="form-group">
                     <label>Gambar</label>
@@ -28,4 +28,33 @@
             </form>
         </div>
     </div>
+    <script>
+        function initSummernote() {
+            $('.summernote').each(function(i) {
+                let model = $(this).data('model');
+                $(this).summernote({
+                    callbacks: {
+                        onChange: debounce(function(contents, $editable) {
+                            @this.set(model, contents)
+                        }, 1000)
+                    },
+                    height: 300,
+                })
+
+            })
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            initSummernote()
+
+            Livewire.on('summernote-reinit', () => {
+                $(".summernote").each(function() {
+                    $(this).summernote('destroy');
+                })
+                setTimeout(() => {
+                    initSummernote()
+                }, 200);
+            })
+        })
+    </script>
 </div>

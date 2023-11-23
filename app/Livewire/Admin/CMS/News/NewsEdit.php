@@ -24,6 +24,11 @@ class NewsEdit extends Component
         $this->currentImageNews = $this->data->image_news;
     }
 
+    public function updated()
+    {
+        $this->dispatch('summernote-reinit');
+    }
+
     public function save()
     {
         $imageNews = null;

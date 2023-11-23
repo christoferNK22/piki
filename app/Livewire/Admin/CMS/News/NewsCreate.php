@@ -14,6 +14,10 @@ class NewsCreate extends Component
     public string $content = "";
     public $images;
 
+    public function updated()
+    {
+        $this->dispatch('summernote-reinit');
+    }
     public function save()
     {
         $imageNews = null;

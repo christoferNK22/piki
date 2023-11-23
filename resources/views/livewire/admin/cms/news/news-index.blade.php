@@ -15,7 +15,7 @@
                                     No
                                 </th>
                                 <th>Judul</th>
-                                <th>Deskripsi</th>
+                                <th>Gambar</th>
                                 <th>Edit</th>
                             </tr>
                         </thead>
@@ -29,7 +29,8 @@
                                         {{ $data->title }}
                                     </td>
                                     <td class="align-middle">
-                                        {{ $data->content }}
+                                        <img src="{{ asset("storage/{$data->image_news}") }}" alt="{{ $data->title }}"
+                                            style="width: 10%">
                                     </td>
                                     <td>
                                         <a href="{{ route('cms.berita.edit', ['id' => $data->id]) }}"
