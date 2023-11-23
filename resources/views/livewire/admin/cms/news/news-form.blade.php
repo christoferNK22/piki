@@ -15,7 +15,7 @@
                 </div>
                 <div class="form-group">
                     <label>Gambar</label>
-                    <input type="file" class="form-control" wire:model="image_news" accept="image/*">
+                    <input type="file" class="form-control" wire:model="images" accept="image/*">
                     @if (isset($currentImageNews) && !is_null($currentImageNews))
                         <figure class="avatar mr-2 avatar-xl">
                             <img src="{{ asset("storage/{$currentImageNews}") }}" alt="{{ $title }}">
