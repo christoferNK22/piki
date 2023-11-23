@@ -32,7 +32,7 @@ class ManagementEdit extends Component
     {
         $image = null;
 
-        $this->data->update([
+        $data = ([
             'name' => $this->name,
             'dewan' => $this->dewan,
             'position' => $this->position,

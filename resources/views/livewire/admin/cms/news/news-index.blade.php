@@ -31,13 +31,6 @@
                                     <td class="align-middle">
                                         {{ $data->content }}
                                     </td>
-                                    <td class="align-middle">
-                                        <figure class="avatar mr-2 avatar-xl">
-                                            <img src="{{ asset(!empty($data->image_news) ? "storage/{$data->image_news}" : 'img/avatar/avatar-1.png') }}"
-                                                alt="{{ $data->name }}">
-                                        </figure>
-
-                                    </td>
                                     <td>
                                         <a href="{{ route('cms.berita.edit', ['id' => $data->id]) }}"
                                             class="btn btn-secondary">Edit</a>

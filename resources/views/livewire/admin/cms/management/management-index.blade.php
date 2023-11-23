@@ -18,6 +18,7 @@
                                 <th>Dewan</th>
                                 <th>Jabatan</th>
                                 <th>Asal</th>
+                                <th>Foto</th>
                                 <th>Edit</th>
                             </tr>
                         </thead>
