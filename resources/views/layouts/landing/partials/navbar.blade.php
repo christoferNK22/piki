@@ -3,9 +3,9 @@
         <a class="navbar-brand" href="{{ route('home') }}">
             <img src="{{ asset('img/piki-logo-dark-e.png') }}" class="logo img-fluid" alt="PIKI">
             <span>
-                Persatuan<br>
+                Persatuan
                 Intelegensia<br>
-                Kristen<br>
+                Kristen
                 Indonesia<br>
             </span>
         </a>
@@ -22,7 +22,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link click-scroll" href="#section_2">Profil</a>
+                    <a class="nav-link click-scroll" href="#pro">Profil</a>
                 </li>
 
                 <li class="nav-item">
@@ -30,11 +30,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link click-scroll" href="#section_4">Agenda Kegiatan</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link click-scroll" href="#section_5">Kontak</a>
+                    <a class="nav-link click-scroll" href="#agenda">Agenda Kegiatan</a>
                 </li>
 
                 <li class="nav-item ms-3">

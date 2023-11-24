@@ -4,6 +4,7 @@
 namespace App\Livewire\Landing;
 
 use App\Models\CMS\CmsAgenda;
+use App\Models\CMS\CmsManagement;
 use App\Models\CMS\CmsNews;
 use App\Models\CMS\CmsVisiMisi;
 use Illuminate\View\View;
@@ -14,6 +15,7 @@ class Dashboard extends Component
     public $news;
     public $visiMisi = [];
     public $events = [];
+    public $managements;
 
     public function mount(): void
     {
@@ -33,10 +35,14 @@ class Dashboard extends Component
                 'description' => $val->note
             ];
         });
+
+        $this->managements = CmsManagement::all();
     }
 
     public function render(): View
     {
-        return view('livewire.landing.dashboard')->layout('layouts.landing.app');
+        return view('livewire.landing.dashboard', [
+            'titleCase' => fn (string $val) => ucwords(str_replace('_', ' ', $val))
+        ])->layout('layouts.landing.app');
     }
 }
