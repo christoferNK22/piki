@@ -32,10 +32,11 @@ class Dashboard extends Component
             return [
                 'title' => $val->title,
                 'start' => $val->start_date,
-                'end' => Carbon::parse($val->finish_date)->addDay(1),
+                'end' => Carbon::parse($val->finish_date)->addDay(1)->toDateString(),
                 'description' => $val->note
             ];
         });
+
 
         $this->managements = CmsManagement::all();
     }
