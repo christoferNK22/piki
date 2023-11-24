@@ -15,6 +15,12 @@
             calendar.render();
         });
     </script>
+
+    <style>
+        .management-img {
+            max-height: 16rem;
+        }
+    </style>
     <section class="hero-section hero-section-full-height">
         <div class="container-fluid">
             <div class="row">
@@ -93,8 +99,8 @@
                 @foreach ($managements as $management)
                     <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
                         <div class="custom-block-wrap">
-                            <img src="{{ asset("storage/{$management->image}") }}" class="custom-block-image img-fluid"
-                                alt="">
+                            <img src="{{ asset("storage/{$management->image}") }}"
+                                class="management-img custom-block-image img-fluid" alt="">
 
                             <div class="custom-block">
                                 <div class="custom-block-body">

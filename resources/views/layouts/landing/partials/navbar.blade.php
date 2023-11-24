@@ -22,11 +22,15 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link click-scroll" href="#pro">Profil</a>
+                    <a class="nav-link click-scroll" href="{{ route('profile') }}">Profil</a>
                 </li>
 
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('news') }}">Berita</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link click-scroll" href="#pengurus">Pengurus</a>
                 </li>
 
                 <li class="nav-item">

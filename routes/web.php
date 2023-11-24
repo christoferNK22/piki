@@ -15,6 +15,7 @@ use App\Livewire\Member\Dashboard as MemberDashboard;
 use App\Livewire\Landing\Dashboard as LandingDashboard;
 use App\Livewire\Landing\NewsListing;
 use App\Livewire\Landing\NewsDetail;
+use App\Livewire\Landing\Profile as ProfileLanding;
 use App\Livewire\Admin\Education\EducationIndex;
 use App\Livewire\Admin\Education\EducationCreate;
 use App\Livewire\Admin\Education\EducationEdit;
@@ -48,6 +49,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', LandingDashboard::class)->name('home');
 Route::get('/news', NewsListing::class)->name('news');
+Route::get('/profile', ProfileLanding::class)->name('profile');
 Route::get('/news/{newsId}', NewsDetail::class)->name('newsDetail');
 
 
