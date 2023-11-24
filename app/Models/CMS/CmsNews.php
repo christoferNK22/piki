@@ -2,6 +2,8 @@
 
 namespace App\Models\CMS;
 
+use Carbon\Carbon;
+use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -16,4 +18,15 @@ class CmsNews extends Model
         'content',
         'image_news',
     ];
+    public $appends = ['created_at_format'];
+
+    public function createdAtFormat(): Attribute
+    {
+        return Attribute::make(get: function () {
+            $dateObj = Carbon::parse($this->created_at);
+            $dateObj->setLocale('id');
+            $formattedDate = $dateObj->isoFormat('dddd, D MMMM YYYY');
+            return $formattedDate;
+        });
+    }
 }
