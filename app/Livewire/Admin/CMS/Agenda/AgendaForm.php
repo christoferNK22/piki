@@ -37,12 +37,12 @@ class AgendaForm extends Component
 
     public function save()
     {
-        $model = $agenda ?? new CmsAgenda();
-        $model->activity = $this->activity;
+        $model = $this->agenda ?? new CmsAgenda();
+        $model->activity = $this->title;
         $model->date = now();
         $model->start_date = $this->startDate;
         $model->finish_date = $this->finishDate;
-        $model->title = $this->title;
+        $model->title = $this->activity;
         $model->note = $this->note;
         $model->save();
 
