@@ -13,6 +13,8 @@ use App\Livewire\Admin\CMS\VisiMisi as VisiMisiIndex;
 use App\Livewire\Admin\Dashboard;
 use App\Livewire\Member\Dashboard as MemberDashboard;
 use App\Livewire\Landing\Dashboard as LandingDashboard;
+use App\Livewire\Landing\NewsListing;
+use App\Livewire\Landing\NewsDetail;
 use App\Livewire\Admin\Education\EducationIndex;
 use App\Livewire\Admin\Education\EducationCreate;
 use App\Livewire\Admin\Education\EducationEdit;
@@ -45,14 +47,9 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', LandingDashboard::class)->name('home');
+Route::get('/news', NewsListing::class)->name('news');
+Route::get('/news/{newsId}', NewsDetail::class)->name('newsDetail');
 
-Route::name('landing.')->group(function () {
-    Route::prefix('beranda')->name('beranda.')->group(function () {
-        Route::get('news-video', function () {
-            return view('livewire.landing.news-video');
-        })->name('news-video');
-    });
-});
 
 Route::prefix('admin/')->group(function () {
     Route::get('login', Login::class)->name('login');
