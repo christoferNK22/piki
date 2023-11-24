@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg bg-light shadow-lg">
     <div class="container">
-        <a class="navbar-brand" href="index.html">
+        <a class="navbar-brand" href="{{ route('home') }}">
             <img src="{{ asset('img/piki-logo-dark-e.png') }}" class="logo img-fluid" alt="PIKI">
             <span>
                 Persatuan<br>
@@ -18,7 +18,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link click-scroll" href="#top">Beranda</a>
+                    <a class="nav-link click-scroll" href="{{ route('home') }}">Beranda</a>
                 </li>
 
                 <li class="nav-item">
@@ -26,7 +26,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link click-scroll" href="#section_3">Berita</a>
+                    <a class="nav-link " href="{{ route('news') }}">Berita</a>
                 </li>
 
                 <li class="nav-item">

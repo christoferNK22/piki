@@ -6,38 +6,17 @@
                 <div class="col-lg-12 col-12 p-0">
                     <div id="hero-slide" class="carousel carousel-fade slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="{{ asset('public/img/slide/volunteer-helping-with-donation-box.jpg') }}"
-                                    class="carousel-image img-fluid" alt="...">
+                            @foreach ($news as $new)
+                                <div class="carousel-item active">
+                                    <img src="{{ asset("storage/{$new->image_news}") }}" class="carousel-image img-fluid"
+                                        alt="...">
 
-                                <div class="carousel-caption d-flex flex-column justify-content-end">
-                                    <h1>be a Kind Heart</h1>
+                                    <div class="carousel-caption d-flex flex-column justify-content-end">
+                                        <h1>{{ $new->title }}</h1>
 
-                                    <p>Professional charity theme based on Bootstrap 5.2.2</p>
+                                    </div>
                                 </div>
-                            </div>
-
-                            <div class="carousel-item">
-                                <img src="{{ asset('public/img/slide/volunteer-selecting-organizing-clothes-donations-charity.jpg') }}"
-                                    class="carousel-image img-fluid" alt="...">
-
-                                <div class="carousel-caption d-flex flex-column justify-content-end">
-                                    <h1>Non-profit</h1>
-
-                                    <p>You can support us to grow more</p>
-                                </div>
-                            </div>
-
-                            <div class="carousel-item">
-                                <img src="{{ asset('public/img/slide/medium-shot-people-collecting-donations.jpg') }}"
-                                    class="carousel-image img-fluid" alt="...">
-
-                                <div class="carousel-caption d-flex flex-column justify-content-end">
-                                    <h1>Humanity</h1>
-
-                                    <p>Please tell your friends about our website</p>
-                                </div>
-                            </div>
+                            @endforeach
                         </div>
 
                         <button class="carousel-control-prev" type="button" data-bs-target="#hero-slide"
@@ -68,60 +47,18 @@
                 </div>
 
                 <div style="display:flex; justify-content:center; gap: 40px">
-                    <div class="col-lg-2 col-md-6 col-12 mb-4 mb-lg-0">
-                        <div class="featured-block d-flex justify-content-center align-items-center">
-                            <a href="donate.html" class="d-block">
-                                <img src="{{ asset('public/img/icons/hands.png') }}"
-                                    class="featured-block-image img-fluid" alt="">
+                    @foreach ($visiMisi as $visi)
+                        <div class="col-lg-2 col-md-6 col-12 mb-4 mb-lg-0">
+                            <div class="featured-block d-flex justify-content-center align-items-center">
+                                <a href="#" class="d-block">
+                                    <img src="{{ asset('public/img/icons/hands.png') }}"
+                                        class="featured-block-image img-fluid" alt="">
 
-                                <p class="featured-block-text">Become a <strong>volunteer</strong></p>
-                            </a>
+                                    <p class="featured-block-text">{!! $visi !!}</p>
+                                </a>
+                            </div>
                         </div>
-                    </div>
-
-                    <div class="col-lg-2 col-md-6 col-12 mb-4 mb-lg-0 mb-md-4">
-                        <div class="featured-block d-flex justify-content-center align-items-center">
-                            <a href="donate.html" class="d-block">
-                                <img src="{{ asset('public/img/icons/heart.png') }}"
-                                    class="featured-block-image img-fluid" alt="">
-
-                                <p class="featured-block-text"><strong>Caring</strong> Earth</p>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-2 col-md-6 col-12 mb-4 mb-lg-0 mb-md-4">
-                        <div class="featured-block d-flex justify-content-center align-items-center">
-                            <a href="donate.html" class="d-block">
-                                <img src="{{ asset('public/img/icons/receive.png') }}"
-                                    class="featured-block-image img-fluid" alt="">
-
-                                <p class="featured-block-text">Make a <strong>Donation</strong></p>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-6 col-12 mb-4 mb-lg-0 mb-md-4">
-                        <div class="featured-block d-flex justify-content-center align-items-center">
-                            <a href="donate.html" class="d-block">
-                                <img src="{{ asset('public/img/icons/receive.png') }}"
-                                    class="featured-block-image img-fluid" alt="">
-
-                                <p class="featured-block-text">Make a <strong>Donation</strong></p>
-                            </a>
-                        </div>
-                    </div>
-
-
-                    <div class="col-lg-2 col-md-6 col-12 mb-4 mb-lg-0">
-                        <div class="featured-block d-flex justify-content-center align-items-center">
-                            <a href="donate.html" class="d-block">
-                                <img src="{{ asset('public/img/icons/scholarship.png') }}"
-                                    class="featured-block-image img-fluid" alt="">
-
-                                <p class="featured-block-text"><strong>Scholarship</strong> Program</p>
-                            </a>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
 
 

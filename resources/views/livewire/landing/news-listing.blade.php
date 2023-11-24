@@ -21,7 +21,7 @@
                     @foreach ($news as $new)
                         <div class="news-block mt-3">
                             <div class="news-block-top">
-                                <a href="news-detail.html">
+                                <a href="{{ route('newsDetail', ['newsId' => $new->id]) }}">
                                     <img src="{{ asset("storage/{$new->image_news}") }}" class="news-image img-fluid"
                                         alt="">
                                 </a>
@@ -51,7 +51,8 @@
                                 </div>
 
                                 <div class="news-block-title mb-2">
-                                    <h4><a href="news-detail.html" class="news-block-title-link">{{ $new->title }}</a>
+                                    <h4><a href="{{ route('newsDetail', ['newsId' => $new->id]) }}"
+                                            class="news-block-title-link">{{ $new->title }}</a>
                                     </h4>
                                 </div>
 
@@ -74,29 +75,32 @@
 
                     <h5 class="mt-5 mb-3">Recent news</h5>
 
-                    <div class="news-block news-block-two-col d-flex mt-4">
-                        <div class="news-block-two-col-image-wrap">
-                            <a href="news-detail.html">
-                                <img src="{{ asset("storage/{$news[0]->image_news}") }}" class="news-image img-fluid"
-                                    alt="">
-                            </a>
-                        </div>
 
-                        <div class="news-block-two-col-info">
-                            <div class="news-block-title mb-2">
-                                <h6><a href="news-detail.html" class="news-block-title-link">{{ $news[0]->title }}</a>
-                                </h6>
+                    @foreach ($recentNews as $recent)
+                        <div class="news-block news-block-two-col d-flex mt-4">
+                            <div class="news-block-two-col-image-wrap">
+                                <a href="{{ route('newsDetail', ['newsId' => $recent->id]) }}">
+                                    <img src="{{ asset("storage/{$recent->image_news}") }}" class="news-image img-fluid"
+                                        alt="">
+                                </a>
                             </div>
 
-                            <div class="news-block-date">
-                                <p>
-                                    <i class="bi-calendar4 custom-icon me-1"></i>
-                                    {{ $news[0]->created_at_format }}
-                                </p>
+                            <div class="news-block-two-col-info">
+                                <div class="news-block-title mb-2">
+                                    <h6><a href="{{ route('newsDetail', ['newsId' => $recent->id]) }}"
+                                            class="news-block-title-link">{{ $recent->title }}</a>
+                                    </h6>
+                                </div>
+
+                                <div class="news-block-date">
+                                    <p>
+                                        <i class="bi-calendar4 custom-icon me-1"></i>
+                                        {{ $recent->created_at_format }}
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-
+                    @endforeach
 
                 </div>
 
