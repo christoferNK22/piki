@@ -63,8 +63,9 @@
                 </div>
 
                 <div class="col-lg-4 col-12 mx-auto mt-4 mt-lg-0">
-                    <form class="custom-form search-form" action="#" method="post" role="form">
-                        <input class="form-control" type="search" placeholder="search" aria-label="search">
+                    <form class="custom-form search-form" action="{{ route('news') }}" method="get" role="form">
+                        <input class="form-control" type="search" placeholder="Search" aria-label="Search"
+                            name="s">
 
                         <button type="submit" class="form-control">
                             <i class="bi-search"></i>

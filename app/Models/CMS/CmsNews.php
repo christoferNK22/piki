@@ -29,4 +29,9 @@ class CmsNews extends Model
             return $formattedDate;
         });
     }
+
+    public function scopeWhereLike($query, $column, $value)
+    {
+        return $query->where($column, 'like', '%' . $value . '%');
+    }
 }

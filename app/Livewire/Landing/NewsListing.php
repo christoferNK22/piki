@@ -9,12 +9,15 @@ use Livewire\Component;
 
 class NewsListing extends Component
 {
-    public $news;
+    public $news = null;
     public $recentNews;
+    public bool $isSearchMode = false;
 
     public  function mount()
     {
-        $this->news = CmsNews::latest()->get();
+        $querySearch = request()->query('s');
+        $this->isSearchMode = !empty($querySearch);
+        $this->news = $this->isSearchMode ? CmsNews::latest()->whereLike('title', $querySearch)->get() : CmsNews::latest()->get();
         $this->recentNews = CmsNews::latest()->limit(2)->get();
     }
 
