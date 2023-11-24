@@ -7,6 +7,7 @@ use App\Models\CMS\CmsAgenda;
 use App\Models\CMS\CmsManagement;
 use App\Models\CMS\CmsNews;
 use App\Models\CMS\CmsVisiMisi;
+use Carbon\Carbon;
 use Illuminate\View\View;
 use Livewire\Component;
 
@@ -31,7 +32,7 @@ class Dashboard extends Component
             return [
                 'title' => $val->title,
                 'start' => $val->start_date,
-                'end' => $val->finish_date,
+                'end' => Carbon::parse($val->finish_date)->addDay(1),
                 'description' => $val->note
             ];
         });
