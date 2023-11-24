@@ -26,7 +26,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link  href="{{ route('news') }}">Berita</a>
+                    <a class="nav-link" href="{{ route('news') }}">Berita</a>
                 </li>
 
                 <li class="nav-item">
