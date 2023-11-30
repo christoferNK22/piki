@@ -19,7 +19,7 @@ class AgendaForm extends Component
 
     public function render()
     {
-        return view('livewire.admin.cms.agenda.agenda-form');
+        return view('livewire.admin.cms.agenda.agenda-form')->title('Tambah Agenda');
     }
 
     public function mount(mixed $agendaId = null)

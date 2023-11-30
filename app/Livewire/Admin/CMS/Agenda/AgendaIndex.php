@@ -10,7 +10,7 @@ class AgendaIndex extends Component
     public $datas;
     public function render()
     {
-        return view('livewire.admin.cms.agenda.agenda-index');
+        return view('livewire.admin.cms.agenda.agenda-index')->title('Agenda Kegiatan');
     }
 
     public function mount()

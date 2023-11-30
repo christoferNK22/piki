@@ -21,6 +21,6 @@ class NewsIndex extends Component
     }
     public function render()
     {
-        return view('livewire.admin.cms.news.news-index')->title('Berita');
+        return view('livewire.admin.cms.news.news-index')->title('Data Berita');
     }
 }

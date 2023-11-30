@@ -21,6 +21,6 @@ class ManagementIndex extends Component
     }
     public function render()
     {
-        return view('livewire.admin.cms.management.management-index')->title('Master Pengurus');
+        return view('livewire.admin.cms.management.management-index')->title('Data Pengurus');
     }
 }

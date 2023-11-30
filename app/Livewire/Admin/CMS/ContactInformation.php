@@ -19,7 +19,7 @@ class ContactInformation extends Component
 
     public function render()
     {
-        return view('livewire.admin.cms.contact-information');
+        return view('livewire.admin.cms.contact-information')->title('Informasi Kontak');
     }
 
     public function mount()

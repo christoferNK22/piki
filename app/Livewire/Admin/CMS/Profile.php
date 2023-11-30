@@ -12,7 +12,7 @@ class Profile extends Component
 
     public function render()
     {
-        return view('livewire.admin.cms.profile');
+        return view('livewire.admin.cms.profile')->title('Profil');
     }
 
     public function mount()

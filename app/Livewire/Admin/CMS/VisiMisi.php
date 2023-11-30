@@ -15,7 +15,7 @@ class VisiMisi extends Component
 
     public function render()
     {
-        return view('livewire.admin.cms.visi-misi');
+        return view('livewire.admin.cms.visi-misi')->title('Visi Misi');
     }
 
     public function updated()
