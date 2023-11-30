@@ -59,6 +59,10 @@
                                 <span>Pengurus</span></a></li>
                     </ul>
                 </li>
+                <li class="dropdown">
+                    <a class="nav-link" href="{{ route('view_laporan.index') }}"><i class="fas fa-envelope"></i>
+                        <span>View Laporan</span></a>
+                </li>
             @endif
         </ul>
     </aside>

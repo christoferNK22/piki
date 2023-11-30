@@ -32,6 +32,7 @@ use App\Livewire\Admin\CMS\Agenda\AgendaIndex;
 use App\Livewire\Admin\CMS\News\NewsIndex;
 use App\Livewire\Admin\CMS\News\NewsCreate;
 use App\Livewire\Admin\CMS\News\NewsEdit;
+use App\Livewire\Admin\ViewLaporan;
 use App\Livewire\Member\Auth\Login as AuthLogin;
 use Illuminate\Support\Facades\Route;
 
@@ -107,6 +108,9 @@ Route::prefix('admin/')->group(function () {
             Route::prefix('visi_misi')->name('visi_misi.')->group(function () {
                 Route::get('', VisiMisiIndex::class)->name('index');
             });
+        });
+        Route::prefix('view_laporan')->name('view_laporan.')->group(function () {
+            Route::get('', ViewLaporan::class)->name('index');
         });
     });
 });
